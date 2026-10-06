@@ -6,11 +6,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Our Little Kingdom ❤️</title>
+<!-- =========================================================
+   SEO & METATAGS
+========================================================= -->
+<title>Our Little Kingdom ❤️ - Ignacio & Vos</title>
+<meta name="description" content="Our Little Kingdom: Una historia que todavía está comenzando. Descubrí nuestro rincón especial con la Keyblade, momentos compartidos y secretos por abrir.">
+<meta name="keywords" content="Our Little Kingdom, Kingdom Hearts, Keyblade, Historia de amor, Recuerdos, Juego">
+<meta name="author" content="Ignacio">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#03040c">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Our Little Kingdom ❤️">
+<meta property="og:description" content="Una historia que todavía está comenzando... Descubrí nuestro rincón único.">
+<meta property="og:image" content="https://i.postimg.cc/FK2D50NB/Gemini-Generated-Image-3e77es3e77es3e77.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Little Kingdom ❤️">
+<meta name="twitter:description" content="Una historia que todavía está comenzando... Descubrí nuestro rincón único.">
+<meta name="twitter:image" content="https://i.postimg.cc/FK2D50NB/Gemini-Generated-Image-3e77es3e77es3e77.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -42,17 +61,13 @@ body{
 ========================================================= */
 
 #intro{
-
     position:fixed;
     inset:0;
-
     z-index:9999;
-
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-
     background:
         radial-gradient(
             circle at center,
@@ -60,7 +75,6 @@ body{
             #0b0e22 38%,
             #02030a 100%
         );
-
     transition:
         opacity 1.5s ease,
         visibility 1.5s ease;
@@ -73,16 +87,12 @@ body{
 }
 
 .intro-heart-container{
-
     position:relative;
-
     width:100px;
     height:100px;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     animation:heartPulse 2s infinite ease-in-out;
 }
 
@@ -93,15 +103,12 @@ body{
 }
 
 @keyframes heartPulse{
-
     0%,100%{
         transform:scale(1);
     }
-
     50%{
         transform:scale(1.15);
     }
-
 }
 
 .intro-text{
@@ -110,55 +117,36 @@ body{
 }
 
 .intro-text h1{
-
     font-family:'Cinzel',serif;
-
     font-size:clamp(2rem,6vw,4rem);
-
     letter-spacing:6px;
-
     text-shadow:
         0 0 10px #9d86ff,
         0 0 30px #6348d8;
 }
 
 .intro-text p{
-
     margin-top:15px;
-
     color:rgba(255,255,255,.6);
-
     letter-spacing:2px;
 }
 
 .start-button{
-
     margin-top:35px;
-
     padding:14px 38px;
-
     background:rgba(100,75,200,.15);
-
     color:white;
-
     border:1px solid #b9a6ff;
-
     font-family:'Cinzel',serif;
-
     letter-spacing:3px;
-
     cursor:pointer;
-
     transition:.3s;
 }
 
 .start-button:hover{
-
     background:rgba(120,90,255,.3);
-
     box-shadow:
         0 0 25px rgba(120,90,255,.7);
-
     transform:scale(1.06);
 }
 
@@ -168,40 +156,28 @@ body{
 ========================================================= */
 
 #stars{
-
     position:fixed;
-
     inset:0;
-
     z-index:-5;
-
     pointer-events:none;
 }
 
 .star{
-
     position:absolute;
-
     width:2px;
     height:2px;
-
     background:white;
-
     border-radius:50%;
-
     animation:twinkle 3s infinite;
 }
 
 @keyframes twinkle{
-
     0%,100%{
         opacity:.15;
     }
-
     50%{
         opacity:1;
     }
-
 }
 
 
@@ -210,51 +186,32 @@ body{
 ========================================================= */
 
 nav{
-
     position:fixed;
-
     top:0;
     left:0;
-
     width:100%;
     height:70px;
-
     z-index:100;
-
     display:flex;
-
     justify-content:center;
     align-items:center;
-
     background:rgba(3,5,14,.55);
-
     backdrop-filter:blur(12px);
-
-    border-bottom:
-        1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 nav a{
-
     color:rgba(255,255,255,.65);
-
     text-decoration:none;
-
     margin:0 18px;
-
     font-size:.75rem;
-
     letter-spacing:2px;
-
     transition:.3s;
 }
 
 nav a:hover{
-
     color:white;
-
-    text-shadow:
-        0 0 10px #a78bfa;
+    text-shadow:0 0 10px #a78bfa;
 }
 
 
@@ -263,46 +220,28 @@ nav a:hover{
 ========================================================= */
 
 section{
-
     min-height:100vh;
-
     padding:120px 8%;
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
-
     position:relative;
 }
 
 .section-title{
-
     font-family:'Cinzel',serif;
-
     font-size:clamp(2rem,5vw,4rem);
-
     text-align:center;
-
     margin-bottom:20px;
-
-    text-shadow:
-        0 0 15px rgba(130,100,255,.35);
+    text-shadow:0 0 15px rgba(130,100,255,.35);
 }
 
 .section-subtitle{
-
     max-width:650px;
-
     text-align:center;
-
     color:rgba(255,255,255,.5);
-
     line-height:1.8;
-
     margin-bottom:65px;
 }
 
@@ -312,115 +251,76 @@ section{
 ========================================================= */
 
 .hero{
-
     min-height:100vh;
-
     text-align:center;
 }
 
 .world-symbol-wrapper{
-
     position:relative;
-
     width:180px;
     height:180px;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     animation:floating 4s infinite ease-in-out;
 }
 
 .world-symbol-ring{
-
     position:absolute;
-
     inset:0;
-
     border:1px solid rgba(210,195,255,.5);
-
     border-radius:50%;
-
     box-shadow:
         0 0 25px rgba(120,90,255,.4),
         inset 0 0 35px rgba(120,90,255,.2);
 }
 
 .world-symbol-ring::after{
-
     content:"";
-
     position:absolute;
-
     inset:-16px;
-
     border:1px solid rgba(180,160,255,.25);
-
     border-radius:50%;
-
     transform:rotate(25deg);
 }
 
 .hero-kh-heart{
-
     width:95px;
-
     height:95px;
-
     z-index:2;
-
     filter: drop-shadow(0 0 15px #a78bfa) drop-shadow(0 0 35px #7050ff);
 }
 
 @keyframes floating{
-
     0%,100%{
         transform:translateY(0);
     }
-
     50%{
         transform:translateY(-15px);
     }
-
 }
 
 .hero h1{
-
     margin-top:50px;
-
     font-family:'Cinzel',serif;
-
     font-size:clamp(2.5rem,7vw,6rem);
-
     letter-spacing:7px;
-
     text-shadow:
         0 0 12px #8e74ff,
         0 0 35px #4d37bd;
 }
 
 .hero h2{
-
     margin-top:12px;
-
     font-weight:300;
-
     letter-spacing:5px;
-
     color:#cfc6ff;
 }
 
 .hero p{
-
     max-width:700px;
-
     margin-top:35px;
-
     line-height:2;
-
     color:rgba(255,255,255,.65);
 }
 
@@ -430,196 +330,151 @@ section{
 ========================================================= */
 
 .story{
-
     width:100%;
-
     max-width:900px;
 }
 
 .story-card{
-
     position:relative;
-
     padding:45px;
-
     margin:30px 0;
-
-    border:
-
-        1px solid
-        rgba(170,150,255,.25);
-
+    border:1px solid rgba(170,150,255,.25);
     background:
-
         linear-gradient(
             135deg,
             rgba(60,45,130,.2),
             rgba(7,9,20,.75)
         );
-
     backdrop-filter:blur(10px);
-
-    box-shadow:
-        0 0 40px rgba(80,50,180,.08);
-
+    box-shadow:0 0 40px rgba(80,50,180,.08);
     opacity:0;
-
     transform:translateY(45px);
-
     transition:1s;
 }
 
 .story-card.visible{
-
     opacity:1;
-
     transform:translateY(0);
 }
 
 .story-card::before{
-
     content:"";
-
     position:absolute;
-
     left:0;
     top:0;
-
     width:3px;
     height:100%;
-
     background:
         linear-gradient(
             transparent,
             #a78bfa,
             transparent
         );
-
-    box-shadow:
-        0 0 15px #8060ff;
+    box-shadow:0 0 15px #8060ff;
 }
 
 .chapter{
-
     color:#a997ff;
-
     font-family:'Cinzel',serif;
-
     letter-spacing:4px;
-
     font-size:.75rem;
 }
 
 .story-card h3{
-
     font-family:'Cinzel',serif;
-
     font-size:1.8rem;
-
     margin:15px 0 20px;
 }
 
 .story-card p{
-
     color:rgba(255,255,255,.7);
-
     line-height:2;
-
     font-size:.95rem;
 }
 
 .story-card .highlight{
-
     color:#d6ccff;
-
     font-style:italic;
 }
 
 
 /* =========================================================
-   KEYBLADE SECTION
+   KEYBLADE SECTION (MEJORADA PARA ALTA RESOLUCIÓN)
 ========================================================= */
 
 .keyblade-section{
-
     background:
         radial-gradient(
             circle at center,
-            rgba(54,40,130,.18),
-            transparent 60%
+            rgba(54,40,130,.22),
+            transparent 65%
         );
 }
 
 .keyblade-stage{
-
     width:100%;
-
     min-height:450px;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     perspective:1000px;
-
     padding: 20px 0;
 }
 
 .keyblade{
-
     position:relative;
-
-    width:100%;
-
-    max-width:850px;
-
+    width:90%;
+    max-width:650px; /* Evita sobre-expandir la imagen */
     cursor:pointer;
-
-    border-radius:16px;
-
+    border-radius:20px;
     overflow:hidden;
-
+    background:rgba(12, 10, 28, 0.6);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(210, 195, 255, 0.4);
     box-shadow: 
-        0 0 25px rgba(160, 110, 255, 0.4),
-        0 0 50px rgba(110, 70, 220, 0.2);
+        0 15px 35px rgba(0, 0, 0, 0.6),
+        0 0 35px rgba(160, 110, 255, 0.35),
+        inset 0 0 20px rgba(180, 140, 255, 0.15);
 
-    border:1px solid rgba(210, 195, 255, 0.35);
+    /* Aceleración por GPU para nitidez máxima en animaciones */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
 
     animation:keyFloat 4s ease-in-out infinite;
-
-    transition:transform .4s ease, box-shadow .4s ease, filter .4s ease;
+    transition:transform .4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow .4s ease, border-color .4s ease;
 }
 
 .keyblade-img{
-
     width:100%;
-
     height:auto;
-
+    max-height:70vh;
     display:block;
-
-    object-fit:cover;
+    object-fit:contain; /* Mantiene proporciones sin distorsionar */
+    
+    /* Filtros de nitidez del navegador */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: high-quality;
+    
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .keyblade:hover{
-
     box-shadow: 
-        0 0 40px rgba(190, 140, 255, 0.8),
-        0 0 80px rgba(130, 90, 255, 0.5);
-
-    transform:scale(1.03);
+        0 20px 45px rgba(0, 0, 0, 0.7),
+        0 0 50px rgba(190, 140, 255, 0.8),
+        0 0 90px rgba(130, 90, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.7);
+    transform:translateY(-8px) scale(1.02);
 }
 
 @keyframes keyFloat{
-
     0%,100%{
-        transform:translateY(0);
+        transform:translateY(0) translateZ(0);
     }
-
     50%{
-        transform:translateY(-14px);
+        transform:translateY(-12px) translateZ(0);
     }
 }
 
@@ -629,7 +484,6 @@ section{
 ========================================================= */
 
 .lock-section{
-
     background:
         radial-gradient(
             circle at center,
@@ -639,35 +493,24 @@ section{
 }
 
 .lock-wrapper{
-
     position:relative;
-
     width:240px;
     height:300px;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     cursor:pointer;
-
     transition:.5s;
 }
 
 .lock-wrapper:hover{
-
     transform:scale(1.04);
 }
 
 .lock{
-
     position:relative;
-
     width:180px;
     height:215px;
-
     background:
         linear-gradient(
             145deg,
@@ -675,97 +518,55 @@ section{
             #8f82ca 45%,
             #403875
         );
-
     border-radius:25px;
-
-    border:
-        3px solid
-        #d7ceff;
-
+    border:3px solid #d7ceff;
     box-shadow:
         inset 0 0 25px rgba(20,10,70,.7),
         0 0 30px rgba(120,95,255,.5);
 }
 
 .lock::before{
-
     content:"";
-
     position:absolute;
-
     width:110px;
     height:110px;
-
-    border:
-        13px solid
-        #b5a7ff;
-
+    border:13px solid #b5a7ff;
     border-bottom:0;
-
-    border-radius:
-        60px 60px 0 0;
-
+    border-radius:60px 60px 0 0;
     top:-85px;
-
     left:32px;
-
-    box-shadow:
-        0 0 20px #8065ff;
+    box-shadow:0 0 20px #8065ff;
 }
 
 .lock::after{
-
     content:"";
-
     position:absolute;
-
     width:28px;
     height:60px;
-
     background:#29234d;
-
     border-radius:20px;
-
     top:83px;
-
     left:75px;
-
-    box-shadow:
-        0 0 10px #17132c;
+    box-shadow:0 0 10px #17132c;
 }
 
 .lock-symbol{
-
     position:absolute;
-
     top:115px;
-
     left:72px;
-
     font-size:35px;
-
     z-index:3;
-
     color:#eeeaff;
-
-    text-shadow:
-        0 0 10px white;
+    text-shadow:0 0 10px white;
 }
 
 .lock-hint{
-
     position:absolute;
-
     bottom:-65px;
-
     width:300px;
-
     text-align:center;
-
     color:rgba(255,255,255,.5);
-
     font-size:.8rem;
-
     letter-spacing:2px;
 }
 
@@ -775,263 +576,170 @@ section{
 ========================================================= */
 
 #game{
-
     display:none;
-
     position:fixed;
-
     inset:0;
-
     z-index:5000;
-
     background:
         radial-gradient(
             circle,
             #17143c,
             #050612 70%
         );
-
     overflow:auto;
-
     padding:80px 20px;
 }
 
 #game.active{
-
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
 }
 
 .game-top{
-
     width:100%;
-
     max-width:1000px;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     margin-bottom:30px;
 }
 
 .game-title{
-
     font-family:'Cinzel',serif;
-
     font-size:clamp(1.5rem,4vw,2.8rem);
 }
 
 .close-game{
-
     background:none;
-
     border:1px solid rgba(255,255,255,.3);
-
     color:white;
-
     padding:10px 18px;
-
     cursor:pointer;
-
     transition:.3s;
 }
 
 .close-game:hover{
-
     background:rgba(255,255,255,.1);
 }
 
 .level-counter{
-
     color:#bdb0ff;
-
     letter-spacing:3px;
-
     font-size:.8rem;
 }
 
 .difference-description{
-
     color:rgba(255,255,255,.55);
-
     margin-bottom:30px;
-
     text-align:center;
 }
 
 .game-board{
-
     width:100%;
-
     max-width:1000px;
-
     display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
+    grid-template-columns:repeat(2,1fr);
     gap:20px;
 }
 
 .scene{
-
     position:relative;
-
     aspect-ratio:16/10;
-
     overflow:hidden;
-
-    border:
-        1px solid
-        rgba(200,190,255,.35);
-
+    border:1px solid rgba(200,190,255,.35);
     background:
         linear-gradient(
             135deg,
             #171b43,
             #30245c
         );
-
-    box-shadow:
-        0 0 30px rgba(80,60,180,.2);
+    box-shadow:0 0 30px rgba(80,60,180,.2);
 }
 
 .scene::before{
-
     content:"";
-
     position:absolute;
-
     width:120px;
     height:120px;
-
     border-radius:50%;
-
     background:#aaa0ff;
-
     top:15%;
-
     left:15%;
-
     box-shadow:
         150px 100px 0 -25px #695ab4,
         300px 20px 0 -40px #d1caff;
 }
 
 .scene::after{
-
     content:"";
-
     position:absolute;
-
     width:80%;
-
     height:25%;
-
     bottom:0;
     left:10%;
-
     background:
         linear-gradient(
             #393363,
             #15162c
         );
-
-    border-radius:
-        50% 50% 0 0;
+    border-radius:50% 50% 0 0;
 }
 
 .difference{
-
     position:absolute;
-
     width:28px;
     height:28px;
-
-    border:
-        2px solid
-        transparent;
-
+    border:2px solid transparent;
     border-radius:50%;
-
     cursor:pointer;
-
     z-index:10;
-
     transition:.3s;
 }
 
 .difference:hover{
-
-    border-color:
-        rgba(255,255,255,.5);
+    border-color:rgba(255,255,255,.5);
 }
 
 .difference.found{
-
     border-color:#fff;
-
-    box-shadow:
-        0 0 15px #bbaeff;
-
+    box-shadow:0 0 15px #bbaeff;
     animation:found .5s ease;
 }
 
 @keyframes found{
-
     0%{
         transform:scale(.5);
     }
-
     100%{
         transform:scale(1.2);
     }
 }
 
 .game-status{
-
     margin-top:30px;
-
     text-align:center;
-
     color:rgba(255,255,255,.6);
 }
 
 .progress{
-
     margin-top:15px;
-
     width:300px;
-
     max-width:80vw;
-
     height:5px;
-
     background:rgba(255,255,255,.1);
 }
 
 .progress-bar{
-
     height:100%;
-
     width:0%;
-
     background:
         linear-gradient(
             90deg,
             #6d54d9,
             #d4cbff
         );
-
-    box-shadow:
-        0 0 10px #8d76ff;
-
+    box-shadow:0 0 10px #8d76ff;
     transition:.5s;
 }
 
@@ -1041,67 +749,44 @@ section{
 ========================================================= */
 
 .letter{
-
     max-width:750px;
-
     padding:65px 55px;
-
     background:
         linear-gradient(
             135deg,
             rgba(35,31,65,.95),
             rgba(8,9,18,.95)
         );
-
-    border:
-        1px solid
-        rgba(200,180,255,.3);
-
-    box-shadow:
-        0 0 50px rgba(100,80,200,.15);
-
+    border:1px solid rgba(200,180,255,.3);
+    box-shadow:0 0 50px rgba(100,80,200,.15);
     text-align:center;
-
     position:relative;
 }
 
 .letter::before{
-
     content:"✦";
-
     position:absolute;
-
     top:20px;
     left:25px;
-
     color:#a98cff;
 }
 
 .letter::after{
-
     content:"✦";
-
     position:absolute;
-
     bottom:20px;
     right:25px;
-
     color:#a98cff;
 }
 
 .letter h3{
-
     font-family:'Cinzel',serif;
-
     font-size:2rem;
-
     margin-bottom:30px;
 }
 
 .letter p{
-
     color:rgba(255,255,255,.7);
-
     line-height:2;
 }
 
@@ -1111,53 +796,35 @@ section{
 ========================================================= */
 
 .final-heart-container{
-
     width:100px;
-
     height:100px;
-
     margin:0 auto;
-
     animation:finalPulse 2s infinite;
-
     filter: drop-shadow(0 0 15px #a78bfa) drop-shadow(0 0 50px #7050ff);
 }
 
 @keyframes finalPulse{
-
     0%,100%{
         transform:scale(1);
     }
-
     50%{
         transform:scale(1.15);
     }
 }
 
 .final-title{
-
     margin-top:30px;
-
     font-family:'Cinzel',serif;
-
     font-size:clamp(2.5rem,7vw,5rem);
-
     text-align:center;
-
-    text-shadow:
-        0 0 20px #7050ff;
+    text-shadow:0 0 20px #7050ff;
 }
 
 .final-text{
-
     max-width:650px;
-
     margin:30px auto;
-
     text-align:center;
-
     color:rgba(255,255,255,.6);
-
     line-height:2;
 }
 
@@ -1167,33 +834,21 @@ section{
 ========================================================= */
 
 .particle{
-
     position:fixed;
-
     pointer-events:none;
-
     z-index:10000;
-
     color:#c7b9ff;
-
-    animation:
-        particleMove 2s forwards;
+    animation:particleMove 2s forwards;
 }
 
 @keyframes particleMove{
-
     from{
         opacity:1;
-        transform:
-            translateY(0)
-            scale(1);
+        transform:translateY(0) scale(1);
     }
-
     to{
         opacity:0;
-        transform:
-            translateY(-120px)
-            scale(.2);
+        transform:translateY(-120px) scale(.2);
     }
 }
 
@@ -1203,35 +858,22 @@ section{
 ========================================================= */
 
 @media(max-width:700px){
-
     nav a{
-
         margin:0 6px;
-
         font-size:.6rem;
     }
-
     section{
-
-        padding:
-            100px 20px;
+        padding:100px 20px;
     }
-
     .story-card{
-
         padding:30px 25px;
     }
-
     .letter{
-
         padding:45px 25px;
     }
-
     .game-board{
-
         grid-template-columns:1fr;
     }
-
 }
 
 </style>
@@ -1249,7 +891,6 @@ section{
 <div id="intro">
 
     <div class="intro-heart-container">
-        <!-- SVG del Corazón Emblemático de Kingdom Hearts -->
         <svg class="kh-heart-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="khGradientIntro" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -1263,25 +904,16 @@ section{
                   fill="url(#khGradientIntro)" 
                   stroke="#ffffff" 
                   stroke-width="1.5"/>
-            <!-- Corona interna estilizada Kingdom Hearts -->
             <path d="M 50 42 L 55 52 L 63 46 L 60 58 L 40 58 L 37 46 L 45 52 Z" fill="#ffffff" opacity="0.85"/>
         </svg>
     </div>
 
     <div class="intro-text">
-
         <h1>OUR LITTLE KINGDOM</h1>
-
-        <p>
-            Una historia que todavía está comenzando...
-        </p>
-
+        <p>Una historia que todavía está comenzando...</p>
     </div>
 
-    <button
-        class="start-button"
-        onclick="startExperience()"
-    >
+    <button class="start-button" onclick="startExperience()">
         INICIAR AVENTURA
     </button>
 
@@ -1296,15 +928,10 @@ section{
 ========================================================= -->
 
 <nav>
-
     <a href="#home">INICIO</a>
-
     <a href="#story">NUESTRA HISTORIA</a>
-
     <a href="#keyblade">KEYBLADE</a>
-
     <a href="#lock-section">SECRETO</a>
-
 </nav>
 
 
@@ -1316,8 +943,6 @@ section{
 
     <div class="world-symbol-wrapper">
         <div class="world-symbol-ring"></div>
-        
-        <!-- Corazón estilo Kingdom Hearts del Inicio -->
         <svg class="hero-kh-heart" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="khGradientHero" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -1331,30 +956,17 @@ section{
                   fill="url(#khGradientHero)" 
                   stroke="#ffffff" 
                   stroke-width="2"/>
-            <!-- Detalle de Corona Kingdom Hearts -->
             <path d="M 50 40 L 56 52 L 65 45 L 61 60 L 39 60 L 35 45 L 44 52 Z" fill="#ffffff" opacity="0.9"/>
         </svg>
     </div>
 
-    <h1>
-        OUR LITTLE KINGDOM
-    </h1>
-
-    <h2>
-        IGNACIO × VOS
-    </h2>
+    <h1>OUR LITTLE KINGDOM</h1>
+    <h2>IGNACIO × VOS</h2>
 
     <p>
-
-        Hay caminos que uno empieza a recorrer
-        sin saber exactamente hacia dónde llevan.
-
+        Hay caminos que uno empieza a recorrer sin saber exactamente hacia dónde llevan.
         <br><br>
-
-        Y a veces, sin darte cuenta,
-        terminás encontrando a alguien
-        con quien querés seguir caminando.
-
+        Y a veces, sin darte cuenta, terminás encontrando a alguien con quien querés seguir caminando.
     </p>
 
 </section>
@@ -1366,185 +978,81 @@ section{
 
 <section id="story">
 
-    <h2 class="section-title">
-        Nuestra historia
-    </h2>
+    <h2 class="section-title">Nuestra historia</h2>
 
     <p class="section-subtitle">
-
-        Puede que nuestra historia recién esté
-        comenzando, pero ya tiene momentos
-        que quiero guardar para siempre.
-
+        Puede que nuestra historia recién esté comenzando, pero ya tiene momentos que quiero guardar para siempre.
     </p>
 
 
     <div class="story">
 
-
         <!-- CHAPTER 1 -->
-
         <article class="story-card">
-
-            <span class="chapter">
-                CHAPTER 01 · THE FIRST CROSSING
-            </span>
-
-            <h3>
-                El primer cruce
-            </h3>
-
+            <span class="chapter">CHAPTER 01 · THE FIRST CROSSING</span>
+            <h3>El primer cruce</h3>
             <p>
-
-                Me acuerdo de aquella primera vez
-                que nos conocimos, en esa Swiftplay
-                con Arkinos.
-
+                Me acuerdo de aquella primera vez que nos conocimos, en esa Swiftplay con Arkinos.
                 <br><br>
-
-                En ese momento probablemente no tenía
-                idea de todo lo que podía venir después.
-
+                En ese momento probablemente no tenía idea de todo lo que podía venir después.
                 <br><br>
-
                 Pero hay algo que hoy puedo decir:
-
                 <br><br>
-
                 <span class="highlight">
-                    "Siempre supe que iba a terminar
-                    cruzando caminos con vos."
+                    "Siempre supe que iba a terminar cruzando caminos con vos."
                 </span>
-
                 <br><br>
-
-                Quizás nuestros corazones ya sabían
-                algo que nosotros todavía no.
-
+                Quizás nuestros corazones ya sabían algo que nosotros todavía no.
             </p>
-
         </article>
-
 
         <!-- CHAPTER 2 -->
-
         <article class="story-card">
-
-            <span class="chapter">
-                CHAPTER 02 · FIRST STEPS
-            </span>
-
-            <h3>
-                Primeros pasos
-            </h3>
-
+            <span class="chapter">CHAPTER 02 · FIRST STEPS</span>
+            <h3>Primeros pasos</h3>
             <p>
-
                 Después llegaron esas llamadas.
-
                 <br><br>
-
                 Y poco a poco me fui abriendo a vos.
-
                 <br><br>
-
-                Capaz desde afuera eran simples palos,
-                chistes, partidas y momentos que parecían
-                no tener demasiada importancia.
-
+                Capaz desde afuera eran simples palos, chistes, partidas y momentos que parecían no tener demasiada importancia.
                 <br><br>
-
                 Pero para mí eran otra cosa.
-
                 <br><br>
-
                 Era <span class="highlight">testear el agua</span>.
-
                 <br><br>
-
-                Empezar a confiar.
-                Empezar a conocernos.
-                Empezar a crear esos pequeños momentos
-                que, sin darnos cuenta, terminaron
-                convirtiéndose en recuerdos lindos.
-
+                Empezar a confiar. Empezar a conocernos. Empezar a crear esos pequeños momentos que, sin darnos cuenta, terminaron convirtiéndose en recuerdos lindos.
                 <br><br>
-
-                Y creo que ahí empezamos a dar
-                nuestros primeros pasos.
-
+                Y creo que ahí empezamos a dar nuestros primeros pasos.
             </p>
-
         </article>
-
 
         <!-- CHAPTER 3 -->
-
         <article class="story-card">
-
-            <span class="chapter">
-                CHAPTER 03 · THE ROAD AHEAD
-            </span>
-
-            <h3>
-                Y acá estamos
-            </h3>
-
+            <span class="chapter">CHAPTER 03 · THE ROAD AHEAD</span>
+            <h3>Y acá estamos</h3>
             <p>
-
                 Y bueno...
-
                 <br><br>
-
                 Acá estamos.
-
                 <br><br>
-
-                Seguimos caminando, incluso cuando
-                nuestros caminos no siempre están
-                físicamente juntos.
-
+                Seguimos caminando, incluso cuando nuestros caminos no siempre están físicamente juntos.
                 <br><br>
-
                 Pero yo sé algo.
-
                 <br><br>
-
-                Como dijo Sora, nuestros corazones
-                pueden guiarnos.
-
+                Como dijo Sora, nuestros corazones pueden guiarnos.
                 <br><br>
-
-                Y aunque alguna vez estemos perdidos
-                en la oscuridad, yo quiero creer que
-                vamos a ser la luz del otro.
-
+                Y aunque alguna vez estemos perdidos en la oscuridad, yo quiero creer que vamos a ser la luz del otro.
                 <br><br>
-
-                Para encontrar el camino de vuelta.
-
+                Para encontrar el camino de vuelta. Para encontrarnos.
                 <br><br>
-
-                Para encontrarnos.
-
+                Incluso en el peor de los momentos, cuando parezca que no sabemos hacia dónde ir...
                 <br><br>
-
-                Incluso en el peor de los momentos,
-                cuando parezca que no sabemos
-                hacia dónde ir...
-
-                <br><br>
-
                 <span class="highlight">
-                    siempre vamos a tener una luz
-                    que nos ayude a encontrar
-                    la vuelta a casa.
+                    siempre vamos a tener una luz que nos ayude a encontrar la vuelta a casa.
                 </span>
-
             </p>
-
         </article>
-
 
     </div>
 
@@ -1557,51 +1065,25 @@ section{
 
 <section id="keyblade" class="keyblade-section">
 
-    <h2 class="section-title">
-        Una Keyblade para nosotros
-    </h2>
+    <h2 class="section-title">Una Keyblade para nosotros</h2>
 
     <p class="section-subtitle">
-
-        Dicen que las Keyblades responden
-        al corazón de quien las empuña.
-
+        Dicen que las Keyblades responden al corazón de quien las empuña.
         <br><br>
-
-        Así que esta todavía está esperando
-        descubrir nuestra historia.
-
+        Así que esta todavía está esperando descubrir nuestra historia.
     </p>
 
-
     <div class="keyblade-stage">
-
-        <div
-            class="keyblade"
-            onclick="keybladeClick(event)"
-            title="Una Keyblade creada por nuestros corazones"
-        >
-
-            <!-- Imagen cargada desde Postimages -->
+        <div class="keyblade" onclick="keybladeClick(event)" title="Una Keyblade creada por nuestros corazones">
             <img 
                 src="https://i.postimg.cc/FK2D50NB/Gemini-Generated-Image-3e77es3e77es3e77.jpg" 
                 alt="Nuestra Keyblade Violeta" 
                 class="keyblade-img"
             >
-
         </div>
-
     </div>
 
-
-    <p
-        style="
-        color:rgba(255,255,255,.45);
-        letter-spacing:2px;
-        font-size:.75rem;
-        margin-top:20px;
-        "
-    >
+    <p style="color:rgba(255,255,255,.45); letter-spacing:2px; font-size:.75rem; margin-top:20px;">
         TOCÁ LA KEYBLADE
     </p>
 
@@ -1612,44 +1094,21 @@ section{
      LOCK
 ========================================================= -->
 
-<section
-    id="lock-section"
-    class="lock-section"
->
+<section id="lock-section" class="lock-section">
 
-    <h2 class="section-title">
-        Un recuerdo escondido
-    </h2>
+    <h2 class="section-title">Un recuerdo escondido</h2>
 
     <p class="section-subtitle">
-
-        Algunas cosas no se encuentran
-        simplemente mirando.
-
+        Algunas cosas no se encuentran simplemente mirando.
         <br><br>
-
         Hay que buscarlas.
-
     </p>
 
-
-    <div
-        class="lock-wrapper"
-        onclick="openGame()"
-    >
-
+    <div class="lock-wrapper" onclick="openGame()">
         <div class="lock">
-
-            <div class="lock-symbol">
-                ♥
-            </div>
-
+            <div class="lock-symbol">♥</div>
         </div>
-
-        <div class="lock-hint">
-            HACÉ CLICK PARA ABRIR
-        </div>
-
+        <div class="lock-hint">HACÉ CLICK PARA ABRIR</div>
     </div>
 
 </section>
@@ -1661,55 +1120,25 @@ section{
 
 <section>
 
-    <h2 class="section-title">
-        Para vos
-    </h2>
-
+    <h2 class="section-title">Para vos</h2>
 
     <div class="letter">
-
-        <h3>
-            ❤️
-        </h3>
-
+        <h3>❤️</h3>
         <p>
-
-            No necesitaba una fecha especial
-            para hacerte esto.
-
+            No necesitaba una fecha especial para hacerte esto.
             <br><br>
-
             Simplemente tuve ganas.
-
             <br><br>
-
-            Porque aunque llevemos poquito tiempo,
-            hay personas que llegan y hacen que
-            todo se sienta un poquito diferente.
-
+            Porque aunque llevemos poquito tiempo, hay personas que llegan y hacen que todo se sienta un poquito diferente.
             <br><br>
-
-            Gracias por todos esos pequeños momentos,
-            por las llamadas, las partidas,
-            las risas y por dejarme ir descubriendo
-            de a poquito quién sos.
-
+            Gracias por todos esos pequeños momentos, por las llamadas, las partidas, las risas y por dejarme ir descubriendo de a poquito quién sos.
             <br><br>
-
-            Esta página no intenta contar
-            toda nuestra historia.
-
+            Esta página no intenta contar toda nuestra historia.
             <br><br>
-
-            Porque todavía nos falta escribir
-            un montón.
-
+            Porque todavía nos falta escribir un montón.
             <br><br>
-
             Es solamente el primer capítulo.
-
         </p>
-
     </div>
 
 </section>
@@ -1731,30 +1160,18 @@ section{
         </svg>
     </div>
 
-    <h2 class="final-title">
-        Esto recién empieza.
-    </h2>
+    <h2 class="final-title">Esto recién empieza.</h2>
 
     <p class="final-text">
-
         No sé cuántos mundos nos quedan por conocer.
-
         <br>
-
         No sé cuántas partidas vamos a jugar.
-
         <br>
-
         No sé cuántos caminos vamos a recorrer.
-
         <br><br>
-
         Pero sí sé una cosa.
-
         <br><br>
-
         Quiero descubrirlos con vos.
-
     </p>
 
 </section>
@@ -1767,72 +1184,27 @@ section{
 <div id="game">
 
     <div class="game-top">
-
         <div>
-
-            <div class="level-counter">
-                NIVEL <span id="levelNumber">1</span> / 10
-            </div>
-
-            <div class="game-title">
-                Encuentra las diferencias
-            </div>
-
+            <div class="level-counter">NIVEL <span id="levelNumber">1</span> / 10</div>
+            <div class="game-title">Encuentra las diferencias</div>
         </div>
-
-
-        <button
-            class="close-game"
-            onclick="closeGame()"
-        >
-            CERRAR
-        </button>
-
+        <button class="close-game" onclick="closeGame()">CERRAR</button>
     </div>
-
 
     <p class="difference-description">
-
-        Hay una diferencia escondida en cada lado.
-        Encontrala para continuar.
-
+        Hay una diferencia escondida en cada lado. Encontrala para continuar.
     </p>
 
-
     <div class="game-board">
-
-        <div
-            class="scene"
-            id="sceneLeft"
-        >
-        </div>
-
-
-        <div
-            class="scene"
-            id="sceneRight"
-        >
-        </div>
-
+        <div class="scene" id="sceneLeft"></div>
+        <div class="scene" id="sceneRight"></div>
     </div>
 
-
     <div class="game-status">
-
-        <span id="gameMessage">
-            Encontrá la diferencia ❤️
-        </span>
-
-
+        <span id="gameMessage">Encontrá la diferencia ❤️</span>
         <div class="progress">
-
-            <div
-                class="progress-bar"
-                id="progressBar"
-            ></div>
-
+            <div class="progress-bar" id="progressBar"></div>
         </div>
-
     </div>
 
 </div>
@@ -1840,22 +1212,13 @@ section{
 
 <script>
 
-
 /* =========================================================
    INTRO
 ========================================================= */
 
 function startExperience(){
-
-    document
-        .getElementById("intro")
-        .classList
-        .add("hidden");
-
-    createParticles(
-        window.innerWidth / 2,
-        window.innerHeight / 2
-    );
+    document.getElementById("intro").classList.add("hidden");
+    createParticles(window.innerWidth / 2, window.innerHeight / 2);
 }
 
 
@@ -1864,26 +1227,13 @@ function startExperience(){
 ========================================================= */
 
 function createStars(){
-
-    const stars =
-        document.getElementById("stars");
-
+    const stars = document.getElementById("stars");
     for(let i = 0; i < 160; i++){
-
-        const star =
-            document.createElement("div");
-
+        const star = document.createElement("div");
         star.className = "star";
-
-        star.style.left =
-            Math.random() * 100 + "%";
-
-        star.style.top =
-            Math.random() * 100 + "%";
-
-        star.style.animationDelay =
-            Math.random() * 3 + "s";
-
+        star.style.left = Math.random() * 100 + "%";
+        star.style.top = Math.random() * 100 + "%";
+        star.style.animationDelay = Math.random() * 3 + "s";
         stars.appendChild(star);
     }
 }
@@ -1895,39 +1245,20 @@ createStars();
    STORY OBSERVER
 ========================================================= */
 
-const observer =
-    new IntersectionObserver(
+const observer = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("visible");
+            }
+        });
+    },
+    { threshold:.15 }
+);
 
-        entries => {
-
-            entries.forEach(entry => {
-
-                if(entry.isIntersecting){
-
-                    entry.target
-                        .classList
-                        .add("visible");
-
-                }
-
-            });
-
-        },
-
-        {
-            threshold:.15
-        }
-
-    );
-
-
-document
-    .querySelectorAll(".story-card")
-    .forEach(card => {
-
-        observer.observe(card);
-
-    });
+document.querySelectorAll(".story-card").forEach(card => {
+    observer.observe(card);
+});
 
 
 /* =========================================================
@@ -1935,25 +1266,15 @@ document
 ========================================================= */
 
 function createParticles(x, y){
-
     const symbols = ["✦", "♥", "♪", "♫", "✨"];
-
     for(let i = 0; i < 18; i++){
-
         const p = document.createElement("div");
-
         p.className = "particle";
-
         p.innerText = symbols[Math.floor(Math.random() * symbols.length)];
-
         p.style.left = (x + (Math.random() * 80 - 40)) + "px";
-
         p.style.top = (y + (Math.random() * 80 - 40)) + "px";
-
         p.style.fontSize = (Math.random() * 14 + 12) + "px";
-
         document.body.appendChild(p);
-
         setTimeout(() => p.remove(), 2000);
     }
 }
@@ -1964,24 +1285,13 @@ function createParticles(x, y){
 ========================================================= */
 
 function keybladeClick(event){
-
-    createParticles(
-        event.clientX,
-        event.clientY
-    );
-
+    createParticles(event.clientX, event.clientY);
     const key = document.querySelector(".keyblade");
-
     key.style.animation = "none";
-
-    key.style.transform = "scale(1.08)";
-
+    key.style.transform = "scale(1.06)";
     setTimeout(() => {
-
         key.style.transform = "scale(1)";
-
         key.style.animation = "keyFloat 4s ease-in-out infinite";
-
     }, 400);
 }
 
@@ -2006,75 +1316,46 @@ const levels = [
     { left: ["80%", "50%"], right: ["25%", "45%"] }
 ];
 
-
 function openGame(){
-
     document.getElementById("game").classList.add("active");
-
     document.body.style.overflow = "hidden";
-
     currentLevel = 1;
-
     loadLevel(currentLevel);
 }
 
-
 function closeGame(){
-
     document.getElementById("game").classList.remove("active");
-
     document.body.style.overflow = "auto";
 }
 
-
 function loadLevel(levelIndex){
-
     const levelData = levels[levelIndex - 1];
-
     document.getElementById("levelNumber").textContent = levelIndex;
-
     const sceneLeft = document.getElementById("sceneLeft");
-
     const sceneRight = document.getElementById("sceneRight");
 
     sceneLeft.innerHTML = `<div class="difference" style="left:${levelData.left[0]};top:${levelData.left[1]}" onclick="foundDifference(event)"></div>`;
-
     sceneRight.innerHTML = `<div class="difference" style="left:${levelData.right[0]};top:${levelData.right[1]}" onclick="foundDifference(event)"></div>`;
 
     document.getElementById("gameMessage").textContent = "Encontrá la diferencia ❤";
-
     document.getElementById("progressBar").style.width = (((levelIndex - 1) / totalLevels) * 100) + "%";
 }
 
-
 function foundDifference(event){
-
     event.stopPropagation();
-
     event.target.classList.add("found");
-
     createParticles(event.clientX, event.clientY);
-
     document.getElementById("gameMessage").textContent = "¡Excelente! Nivel superado ✨";
-
     document.getElementById("progressBar").style.width = ((currentLevel / totalLevels) * 100) + "%";
 
     setTimeout(() => {
-
         if(currentLevel < totalLevels){
-
             currentLevel++;
-
             loadLevel(currentLevel);
-
         } else {
-
             document.getElementById("gameMessage").textContent = "¡Felicitaciones! Has completado nuestra historia ❤️";
-
             setTimeout(closeGame, 2200);
-
         }
-
     }, 1000);
 }
 
