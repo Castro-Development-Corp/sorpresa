@@ -573,14 +573,14 @@ section{
 
 
 /* =========================================================
-   KEYBLADE
+   KEYBLADE (ADAPTADA PARA IMAGEN)
 ========================================================= */
 
 .keyblade-stage{
 
     width:100%;
 
-    min-height:550px;
+    min-height:450px;
 
     display:flex;
 
@@ -589,232 +589,64 @@ section{
     align-items:center;
 
     perspective:1000px;
+
+    padding: 20px 0;
 }
 
 .keyblade{
 
     position:relative;
 
-    width:170px;
+    width:100%;
 
-    height:480px;
+    max-width:850px;
 
     cursor:pointer;
 
-    transform:
-        rotate(22deg)
-        rotateY(-8deg);
+    border-radius:16px;
 
-    filter:
-        drop-shadow(0 0 12px #a18aff)
-        drop-shadow(0 0 35px #6248d8);
+    overflow:hidden;
+
+    box-shadow: 
+        0 0 25px rgba(160, 110, 255, 0.4),
+        0 0 50px rgba(110, 70, 220, 0.2);
+
+    border:1px solid rgba(210, 195, 255, 0.35);
 
     animation:keyFloat 4s ease-in-out infinite;
 
-    transition:.5s;
+    transition:transform .4s ease, box-shadow .4s ease, filter .4s ease;
+}
+
+.keyblade-img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    object-fit:cover;
 }
 
 .keyblade:hover{
 
-    filter:
-        drop-shadow(0 0 18px #d2c6ff)
-        drop-shadow(0 0 55px #7050ff);
+    box-shadow: 
+        0 0 40px rgba(190, 140, 255, 0.8),
+        0 0 80px rgba(130, 90, 255, 0.5);
 
-    transform:
-        rotate(22deg)
-        rotateY(-8deg)
-        scale(1.06);
+    transform:scale(1.03);
 }
 
 @keyframes keyFloat{
 
     0%,100%{
-        transform:
-            rotate(22deg)
-            translateY(0);
+        transform:translateY(0);
     }
 
     50%{
-        transform:
-            rotate(22deg)
-            translateY(-18px);
+        transform:translateY(-14px);
     }
-}
-
-
-/* BLADE */
-
-.key-blade{
-
-    position:absolute;
-
-    left:70px;
-    top:20px;
-
-    width:35px;
-    height:300px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #656574,
-            #f6f3ff 35%,
-            #ffffff 50%,
-            #a7a4b4
-        );
-
-    clip-path:
-        polygon(
-            42% 0,
-            65% 7%,
-            100% 25%,
-            72% 42%,
-            100% 58%,
-            70% 73%,
-            100% 100%,
-            50% 83%,
-            0 100%,
-            28% 70%,
-            0 52%,
-            28% 38%,
-            0 25%
-        );
-
-    box-shadow:
-        0 0 15px white;
-}
-
-
-/* BLADE DECORATION */
-
-.key-blade::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:12px;
-    height:230px;
-
-    left:12px;
-    top:25px;
-
-    background:
-        linear-gradient(
-            #bcaeff,
-            transparent
-        );
-
-    opacity:.8;
-}
-
-
-/* HANDLE */
-
-.key-handle{
-
-    position:absolute;
-
-    left:53px;
-
-    bottom:30px;
-
-    width:70px;
-
-    height:120px;
-
-    border:
-        12px solid
-        #a89aff;
-
-    border-radius:45% 45% 50% 50%;
-
-    box-shadow:
-        inset 0 0 20px #6c52dc,
-        0 0 15px #9d87ff;
-}
-
-.key-handle::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:12px;
-
-    border:
-
-        3px solid
-        #e5e0ff;
-
-    border-radius:50%;
-}
-
-
-/* HEART */
-
-.key-heart{
-
-    position:absolute;
-
-    left:52px;
-
-    top:265px;
-
-    width:75px;
-    height:75px;
-
-    display:flex;
-
-    justify-content:center;
-    align-items:center;
-
-    font-size:45px;
-
-    color:white;
-
-    text-shadow:
-        0 0 10px #fff,
-        0 0 25px #a78bfa;
-
-    z-index:5;
-}
-
-
-/* KEY CHAIN */
-
-.key-chain{
-
-    position:absolute;
-
-    left:77px;
-
-    bottom:-30px;
-
-    width:35px;
-    height:70px;
-
-    border:
-        5px solid #a99cff;
-
-    border-radius:50%;
-
-    box-shadow:
-        0 0 12px #8065ff;
-}
-
-.key-chain::after{
-
-    content:"♥";
-
-    position:absolute;
-
-    top:38px;
-    left:2px;
-
-    font-size:25px;
-
-    color:#dcd4ff;
 }
 
 
@@ -1101,13 +933,6 @@ section{
     box-shadow:
         0 0 30px rgba(80,60,180,.2);
 }
-
-
-/*
-    Las escenas son dibujos CSS provisionales.
-    Después podemos reemplazarlas por imágenes
-    reales de ustedes.
-*/
 
 .scene::before{
 
@@ -1757,15 +1582,12 @@ section{
             title="Una Keyblade creada por nuestros corazones"
         >
 
-            <div class="key-blade"></div>
-
-            <div class="key-heart">
-                ♥
-            </div>
-
-            <div class="key-handle"></div>
-
-            <div class="key-chain"></div>
+            <!-- Imagen cargada directamente desde Postimages -->
+            <img 
+                src="https://i.postimg.cc/FK2D50NB/Gemini-Generated-Image-3e77es3e77es3e77.jpg" 
+                alt="Nuestra Keyblade Violeta" 
+                class="keyblade-img"
+            >
 
         </div>
 
@@ -1777,6 +1599,7 @@ section{
         color:rgba(255,255,255,.45);
         letter-spacing:2px;
         font-size:.75rem;
+        margin-top:20px;
         "
     >
         TOCÁ LA KEYBLADE
@@ -1976,13 +1799,6 @@ section{
             class="scene"
             id="sceneLeft"
         >
-
-            <div
-                class="difference"
-                style="left:22%;top:25%"
-                onclick="foundDifference(event)"
-            ></div>
-
         </div>
 
 
@@ -1990,13 +1806,6 @@ section{
             class="scene"
             id="sceneRight"
         >
-
-            <div
-                class="difference"
-                style="left:68%;top:58%"
-                onclick="foundDifference(event)"
-            ></div>
-
         </div>
 
     </div>
@@ -2116,7 +1925,36 @@ document
 
 
 /* =========================================================
-   KEYBLADE
+   PARTICLES
+========================================================= */
+
+function createParticles(x, y){
+
+    const symbols = ["✦", "♥", "♪", "♫", "✨"];
+
+    for(let i = 0; i < 18; i++){
+
+        const p = document.createElement("div");
+
+        p.className = "particle";
+
+        p.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+
+        p.style.left = (x + (Math.random() * 80 - 40)) + "px";
+
+        p.style.top = (y + (Math.random() * 80 - 40)) + "px";
+
+        p.style.fontSize = (Math.random() * 14 + 12) + "px";
+
+        document.body.appendChild(p);
+
+        setTimeout(() => p.remove(), 2000);
+    }
+}
+
+
+/* =========================================================
+   KEYBLADE CLICK
 ========================================================= */
 
 function keybladeClick(event){
@@ -2126,24 +1964,19 @@ function keybladeClick(event){
         event.clientY
     );
 
-    const key =
-        document.querySelector(".keyblade");
+    const key = document.querySelector(".keyblade");
 
-    key.style.animation =
-        "none";
+    key.style.animation = "none";
 
-    key.style.transform =
-        "rotate(22deg) scale(1.15)";
+    key.style.transform = "scale(1.08)";
 
     setTimeout(() => {
 
-        key.style.transform =
-            "rotate(22deg) scale(1)";
+        key.style.transform = "scale(1)";
 
-        key.style.animation =
-            "keyFloat 4s ease-in-out infinite";
+        key.style.animation = "keyFloat 4s ease-in-out infinite";
 
-    },700);
+    }, 400);
 }
 
 
@@ -2152,16 +1985,29 @@ function keybladeClick(event){
 ========================================================= */
 
 let currentLevel = 1;
+const totalLevels = 10;
+
+const levels = [
+    { left: ["22%", "25%"], right: ["68%", "58%"] },
+    { left: ["42%", "35%"], right: ["20%", "70%"] },
+    { left: ["15%", "60%"], right: ["75%", "25%"] },
+    { left: ["55%", "20%"], right: ["30%", "65%"] },
+    { left: ["30%", "45%"], right: ["80%", "40%"] },
+    { left: ["70%", "70%"], right: ["15%", "15%"] },
+    { left: ["25%", "80%"], right: ["50%", "30%"] },
+    { left: ["60%", "30%"], right: ["40%", "75%"] },
+    { left: ["35%", "15%"], right: ["65%", "85%"] },
+    { left: ["80%", "50%"], right: ["25%", "45%"] }
+];
+
 
 function openGame(){
 
-    document
-        .getElementById("game")
-        .classList
-        .add("active");
+    document.getElementById("game").classList.add("active");
 
-    document.body.style.overflow =
-        "hidden";
+    document.body.style.overflow = "hidden";
+
+    currentLevel = 1;
 
     loadLevel(currentLevel);
 }
@@ -2169,316 +2015,61 @@ function openGame(){
 
 function closeGame(){
 
-    document
-        .getElementById("game")
-        .classList
-        .remove("active");
+    document.getElementById("game").classList.remove("active");
 
-    document.body.style.overflow =
-        "auto";
+    document.body.style.overflow = "auto";
 }
 
 
-/* =========================================================
-   10 LEVELS
-========================================================= */
+function loadLevel(levelIndex){
 
-const levels = [
+    const levelData = levels[levelIndex - 1];
 
-    {
-        left:["22%","25%"],
-        right:["68%","58%"]
-    },
+    document.getElementById("levelNumber").textContent = levelIndex;
 
-    {
-        left:["42%","35%"],
-        right:["20%","70%"]
-    },
+    const sceneLeft = document.getElementById("sceneLeft");
 
-    {
-        left:["75%","28%"],
-        right:["35%","48%"]
-    },
+    const sceneRight = document.getElementById("sceneRight");
 
-    {
-        left:["28%","62%"],
-        right:["78%","35%"]
-    },
+    sceneLeft.innerHTML = `<div class="difference" style="left:${levelData.left[0]};top:${levelData.left[1]}" onclick="foundDifference(event)"></div>`;
 
-    {
-        left:["58%","20%"],
-        right:["25%","55%"]
-    },
+    sceneRight.innerHTML = `<div class="difference" style="left:${levelData.right[0]};top:${levelData.right[1]}" onclick="foundDifference(event)"></div>`;
 
-    {
-        left:["15%","45%"],
-        right:["70%","72%"]
-    },
+    document.getElementById("gameMessage").textContent = "Encontrá la diferencia ❤";
 
-    {
-        left:["65%","65%"],
-        right:["40%","25%"]
-    },
-
-    {
-        left:["35%","22%"],
-        right:["80%","50%"]
-    },
-
-    {
-        left:["72%","45%"],
-        right:["18%","30%"]
-    },
-
-    {
-        left:["50%","70%"],
-        right:["60%","30%"]
-    }
-
-];
-
-
-function loadLevel(level){
-
-    document
-        .getElementById("levelNumber")
-        .textContent =
-        level;
-
-
-    const left =
-        document.getElementById("sceneLeft");
-
-    const right =
-        document.getElementById("sceneRight");
-
-
-    left.innerHTML = "";
-
-    right.innerHTML = "";
-
-
-    const l =
-        levels[level - 1].left;
-
-    const r =
-        levels[level - 1].right;
-
-
-    const differenceLeft =
-        document.createElement("div");
-
-    differenceLeft.className =
-        "difference";
-
-    differenceLeft.style.left =
-        l[0];
-
-    differenceLeft.style.top =
-        l[1];
-
-    differenceLeft.onclick =
-        foundDifference;
-
-
-    const differenceRight =
-        document.createElement("div");
-
-    differenceRight.className =
-        "difference";
-
-    differenceRight.style.left =
-        r[0];
-
-    differenceRight.style.top =
-        r[1];
-
-    differenceRight.onclick =
-        foundDifference;
-
-
-    left.appendChild(
-        differenceLeft
-    );
-
-    right.appendChild(
-        differenceRight
-    );
-
-
-    document
-        .getElementById("gameMessage")
-        .textContent =
-        "Encontrá la diferencia ❤️";
+    document.getElementById("progressBar").style.width = (((levelIndex - 1) / totalLevels) * 100) + "%";
 }
 
-
-/* =========================================================
-   FIND DIFFERENCE
-========================================================= */
 
 function foundDifference(event){
 
     event.stopPropagation();
 
-    const target =
-        event.currentTarget;
+    event.target.classList.add("found");
 
-    if(
-        target.classList.contains("found")
-    ){
+    createParticles(event.clientX, event.clientY);
 
-        return;
+    document.getElementById("gameMessage").textContent = "¡Excelente! Nivel superado ✨";
 
-    }
-
-
-    target.classList.add("found");
-
-
-    createParticles(
-        event.clientX,
-        event.clientY
-    );
-
-
-    document
-        .getElementById("gameMessage")
-        .textContent =
-        "¡Encontrada! ✨";
-
-
-    const progress =
-        ((currentLevel) / 10) * 100;
-
-
-    document
-        .getElementById("progressBar")
-        .style.width =
-        progress + "%";
-
+    document.getElementById("progressBar").style.width = ((currentLevel / totalLevels) * 100) + "%";
 
     setTimeout(() => {
 
-        if(currentLevel < 10){
+        if(currentLevel < totalLevels){
 
             currentLevel++;
 
-            loadLevel(
-                currentLevel
-            );
+            loadLevel(currentLevel);
 
-        }else{
+        } else {
 
-            finishGame();
+            document.getElementById("gameMessage").textContent = "¡Felicitaciones! Has completado nuestra historia ❤️";
+
+            setTimeout(closeGame, 2200);
 
         }
 
-    },1000);
-
-}
-
-
-/* =========================================================
-   GAME FINISH
-========================================================= */
-
-function finishGame(){
-
-    document
-        .getElementById("gameMessage")
-        .innerHTML =
-        `
-        <strong>
-        ✨ COMPLETASTE LOS 10 NIVELES ✨
-        </strong>
-        <br><br>
-        Parece que incluso cuando las cosas
-        están escondidas...
-        <br>
-        siempre encontramos el camino.
-        `;
-
-
-    createParticles(
-        window.innerWidth / 2,
-        window.innerHeight / 2
-    );
-
-    for(let i = 0; i < 5; i++){
-
-        setTimeout(() => {
-
-            createParticles(
-                Math.random() *
-                window.innerWidth,
-
-                Math.random() *
-                window.innerHeight
-            );
-
-        }, i * 250);
-
-    }
-
-}
-
-
-/* =========================================================
-   PARTICLES
-========================================================= */
-
-function createParticles(x,y){
-
-    for(let i = 0; i < 18; i++){
-
-        const particle =
-            document.createElement("div");
-
-        particle.className =
-            "particle";
-
-        particle.innerHTML =
-            Math.random() > .5
-            ? "✦"
-            : "♥";
-
-
-        particle.style.left =
-            (
-                x +
-                Math.random() * 100 -
-                50
-            ) + "px";
-
-
-        particle.style.top =
-            (
-                y +
-                Math.random() * 100 -
-                50
-            ) + "px";
-
-
-        particle.style.fontSize =
-            (
-                Math.random() * 12 + 8
-            ) + "px";
-
-
-        document.body.appendChild(
-            particle
-        );
-
-
-        setTimeout(() => {
-
-            particle.remove();
-
-        },2000);
-
-    }
-
+    }, 1000);
 }
 
 </script>
