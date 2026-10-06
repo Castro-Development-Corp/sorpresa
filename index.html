@@ -239,6 +239,7 @@ nav a:hover{
     box-shadow: 0 0 12px rgba(167, 139, 250, 0.5);
 }
 
+/* Potenciador de Audio */
 .boost-btn {
     background: rgba(255, 180, 50, 0.12);
     border: 1px solid rgba(255, 200, 100, 0.5);
@@ -471,6 +472,7 @@ section{
     padding: 30px 0;
 }
 
+/* Tarjeta vertical ajustada */
 .keyblade{
     position:relative;
     width:280px;
@@ -498,6 +500,7 @@ section{
     transition:transform .4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow .4s ease, border-color .4s ease;
 }
 
+/* Rotación y escalado para presentar la imagen horizontal en vertical verticalmente */
 .keyblade-img{
     height:460px;
     width:auto;
@@ -531,120 +534,94 @@ section{
 
 
 /* =========================================================
-   KEYHOLE SECTION (ESTILO KINGDOM HEARTS)
+   LOCK
 ========================================================= */
 
-.keyhole-section{
+.lock-section{
     background:
         radial-gradient(
             circle at center,
-            rgba(65, 36, 163, 0.3),
-            rgba(15, 10, 38, 0.8) 70%,
-            transparent 100%
+            rgba(42,35,100,.25),
+            transparent 65%
         );
 }
 
-.keyhole-wrapper{
+.lock-wrapper{
     position:relative;
-    width:280px;
-    height:340px;
+    width:240px;
+    height:300px;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
     cursor:pointer;
-    transition:.5s ease;
+    transition:.5s;
 }
 
-.keyhole-wrapper:hover{
-    transform:scale(1.08);
+.lock-wrapper:hover{
+    transform:scale(1.04);
 }
 
-.keyhole-container{
+.lock{
     position:relative;
-    width:160px;
-    height:220px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    width:180px;
+    height:215px;
+    background:
+        linear-gradient(
+            145deg,
+            #e8e3ff,
+            #8f82ca 45%,
+            #403875
+        );
+    border-radius:25px;
+    border:3px solid #d7ceff;
+    box-shadow:
+        inset 0 0 25px rgba(20,10,70,.7),
+        0 0 30px rgba(120,95,255,.5);
 }
 
-/* Aura resplandeciente alrededor del Keyhole */
-.keyhole-glow{
+.lock::before{
+    content:"";
     position:absolute;
-    width:190px;
-    height:190px;
-    border-radius:50%;
-    background: radial-gradient(circle, rgba(200, 175, 255, 0.6) 0%, rgba(138, 101, 255, 0.25) 50%, transparent 75%);
-    filter: blur(20px);
-    animation: keyholePulse 3s infinite ease-in-out;
+    width:110px;
+    height:110px;
+    border:13px solid #b5a7ff;
+    border-bottom:0;
+    border-radius:60px 60px 0 0;
+    top:-85px;
+    left:32px;
+    box-shadow:0 0 20px #8065ff;
 }
 
-@keyframes keyholePulse {
-    0%, 100% {
-        transform: scale(0.9);
-        opacity: 0.7;
-    }
-    50% {
-        transform: scale(1.25);
-        opacity: 1;
-    }
-}
-
-/* SVG del Keyhole estilo KH */
-.keyhole-svg{
-    width:100%;
-    height:100%;
-    z-index:2;
-    filter: drop-shadow(0 0 20px #a885ff) drop-shadow(0 0 50px #6333ff);
-    transition: filter 0.4s ease;
-}
-
-.keyhole-wrapper:hover .keyhole-svg {
-    filter: drop-shadow(0 0 25px #ffffff) drop-shadow(0 0 60px #b89eff) drop-shadow(0 0 90px #7050ff);
-}
-
-/* Anillos decorativos concéntricos */
-.keyhole-ring{
+.lock::after{
+    content:"";
     position:absolute;
-    border:1px dashed rgba(210, 190, 255, 0.5);
-    border-radius:50%;
-    animation: rotateRing 20s linear infinite;
-    pointer-events:none;
+    width:28px;
+    height:60px;
+    background:#29234d;
+    border-radius:20px;
+    top:83px;
+    left:75px;
+    box-shadow:0 0 10px #17132c;
 }
 
-.keyhole-ring-1{
-    width: 220px;
-    height: 220px;
+.lock-symbol{
+    position:absolute;
+    top:115px;
+    left:72px;
+    font-size:35px;
+    z-index:3;
+    color:#eeeaff;
+    text-shadow:0 0 10px white;
 }
 
-.keyhole-ring-2{
-    width: 260px;
-    height: 260px;
-    border-style: solid;
-    border-color: rgba(160, 120, 255, 0.2);
-    animation: rotateRing 30s linear infinite reverse;
-}
-
-@keyframes rotateRing {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.keyhole-hint{
-    margin-top:25px;
+.lock-hint{
+    position:absolute;
+    bottom:-65px;
+    width:300px;
     text-align:center;
-    color:rgba(235, 225, 255, 0.7);
-    font-size:.78rem;
+    color:rgba(255,255,255,.5);
+    font-size:.8rem;
     letter-spacing:2px;
-    text-transform:uppercase;
-    text-shadow: 0 0 8px rgba(160, 120, 255, 0.5);
-    transition: color 0.3s;
-}
-
-.keyhole-wrapper:hover .keyhole-hint{
-    color: #ffffff;
-    text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
 }
 
 
@@ -1009,10 +986,12 @@ section{
                     <stop offset="100%" stop-color="#6348d8" />
                 </linearGradient>
             </defs>
+            <!-- Corona superior / Mango estilo KH -->
             <path d="M 50 8 C 41 8 33 14 33 24 C 33 32 40 37 45 40 L 45 78 C 42 78 38 78 38 82 C 38 85 42 85 45 85 L 45 92 L 55 92 L 55 85 C 58 85 62 85 62 82 C 62 78 58 78 55 78 L 55 68 L 68 68 L 68 60 L 55 60 L 55 52 L 65 52 L 65 45 L 55 45 L 55 40 C 60 37 67 32 67 24 C 67 14 59 8 50 8 Z M 50 16 C 56 16 60 19 60 24 C 60 29 55 32 50 35 C 45 32 40 29 40 24 C 40 19 44 16 50 16 Z" 
                   fill="url(#keyGradientIntro)" 
                   stroke="#ffffff" 
                   stroke-width="1.5"/>
+            <!-- Corazón interior central -->
             <path d="M 50 21 C 47 18 43 19 43 22 C 43 25 50 29 50 29 C 50 29 57 25 57 22 C 57 19 53 18 50 21 Z" fill="#ffffff" opacity="0.9"/>
         </svg>
     </div>
@@ -1040,7 +1019,7 @@ section{
     <a href="#home">INICIO</a>
     <a href="#story">NUESTRA HISTORIA</a>
     <a href="#keyblade">KEYBLADE</a>
-    <a href="#keyhole">SECRETO</a>
+    <a href="#lock-section">SECRETO</a>
     
     <div class="nav-audio-group">
         <button class="music-btn" id="musicToggle" onclick="toggleMusic()">🎵 MÚSICA: ON</button>
@@ -1205,54 +1184,24 @@ section{
 
 
 <!-- =========================================================
-     KEYHOLE SECTION (REEMPLAZO DEL CANDADO)
+     LOCK
 ========================================================= -->
 
-<section id="keyhole" class="keyhole-section">
+<section id="lock-section" class="lock-section">
 
-    <h2 class="section-title">Un mundo por abrir</h2>
+    <h2 class="section-title">Un recuerdo escondido</h2>
 
     <p class="section-subtitle">
-        Toda cerradura guarda una entrada.
+        Algunas cosas no se encuentran simplemente mirando.
         <br><br>
-        Apunta la luz para liberar lo que hay más allá.
+        Hay que buscarlas.
     </p>
 
-    <div class="keyhole-wrapper" onclick="openGame()">
-        <div class="keyhole-ring keyhole-ring-1"></div>
-        <div class="keyhole-ring keyhole-ring-2"></div>
-        <div class="keyhole-glow"></div>
-        
-        <div class="keyhole-container">
-            <svg class="keyhole-svg" viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="keyholeLightGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#ffffff" />
-                        <stop offset="35%" stop-color="#f0eaff" />
-                        <stop offset="70%" stop-color="#a488ff" />
-                        <stop offset="100%" stop-color="#552adb" />
-                    </linearGradient>
-                </defs>
-                
-                <!-- Silueta icónica del Keyhole de Kingdom Hearts -->
-                <path d="M 50 18 
-                         A 27 27 0 1 0 50 72 
-                         L 62 122 
-                         C 62 125, 60 126, 57 126 
-                         L 43 126 
-                         C 40 126, 38 125, 38 122 
-                         L 50 72 
-                         A 27 27 0 1 0 50 18 Z" 
-                      fill="url(#keyholeLightGrad)" 
-                      stroke="#ffffff" 
-                      stroke-width="2"/>
-                      
-                <!-- Núcleo de luz central -->
-                <circle cx="50" cy="45" r="12" fill="#ffffff" opacity="0.9"/>
-            </svg>
+    <div class="lock-wrapper" onclick="openGame()">
+        <div class="lock">
+            <div class="lock-symbol">🔑</div>
         </div>
-
-        <div class="keyhole-hint">TOCÁ EL KEYHOLE PARA SELLAR EL MUNDO</div>
+        <div class="lock-hint">HACÉ CLICK PARA ABRIR</div>
     </div>
 
 </section>
@@ -1345,7 +1294,7 @@ section{
     </div>
 
     <div class="game-status">
-        <span id="gameMessage">Encontrá la diferencia ❤</span>
+        <span id="gameMessage">Encontrá la diferencia ❤️</span>
         <div class="progress">
             <div class="progress-bar" id="progressBar"></div>
         </div>
@@ -1412,6 +1361,7 @@ function toggleAudioBoost(){
 function applyBoostCommand(){
     const iframe = document.getElementById("bg-music");
     if(iframe && iframe.contentWindow){
+        // Envía comando postMessage a la API de Youtube Iframe para llevar volumen al 100% y potenciar
         iframe.contentWindow.postMessage(JSON.stringify({
             event: 'command',
             func: 'setVolume',
@@ -1507,7 +1457,7 @@ function keybladeClick(event){
 
 
 /* =========================================================
-   KEYHOLE / GAME
+   LOCK / GAME
 ========================================================= */
 
 let currentLevel = 1;
