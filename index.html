@@ -18,7 +18,7 @@
 
 <!-- Open Graph / Facebook / WhatsApp -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Our Little Kingdom ❤️">
+<meta property="og:title" content="Our Little Kingdom ❤️️">
 <meta property="og:description" content="Una historia que todavía está comenzando... Descubrí nuestro rincón único.">
 <meta property="og:image" content="https://i.postimg.cc/FK2D50NB/Gemini-Generated-Image-3e77es3e77es3e77.jpg">
 
@@ -71,8 +71,8 @@ body{
     background:
         radial-gradient(
             circle at center,
-            #20275a 0%,
-            #0b0e22 38%,
+            #1e1642 0%,
+            #0b0a21 42%,
             #02030a 100%
         );
     transition:
@@ -88,18 +88,18 @@ body{
 
 .intro-key-container{
     position:relative;
-    width:110px;
-    height:110px;
+    width:140px;
+    height:140px;
     display:flex;
     justify-content:center;
     align-items:center;
-    animation:keyPulse 2.2s infinite ease-in-out;
+    animation:keyPulse 2.5s infinite ease-in-out;
 }
 
 .kh-key-svg{
     width:100%;
     height:100%;
-    filter: drop-shadow(0 0 12px #a78bfa) drop-shadow(0 0 32px #7050ff);
+    filter: drop-shadow(0 0 15px #b088ff) drop-shadow(0 0 35px #7a3cf1);
 }
 
 @keyframes keyPulse{
@@ -107,7 +107,7 @@ body{
         transform:scale(1) rotate(0deg);
     }
     50%{
-        transform:scale(1.12) rotate(-4deg);
+        transform:scale(1.08) rotate(-2deg);
     }
 }
 
@@ -121,22 +121,23 @@ body{
     font-size:clamp(2rem,6vw,4rem);
     letter-spacing:6px;
     text-shadow:
-        0 0 10px #9d86ff,
+        0 0 10px #b088ff,
         0 0 30px #6348d8;
 }
 
 .intro-text p{
     margin-top:15px;
-    color:rgba(255,255,255,.6);
+    color:rgba(255,255,255,.75);
     letter-spacing:2px;
 }
 
 .start-button{
     margin-top:35px;
     padding:14px 38px;
-    background:rgba(100,75,200,.15);
+    background:rgba(120,80,240,.18);
     color:white;
-    border:1px solid #b9a6ff;
+    border:1px solid #c8b3ff;
+    border-radius:25px;
     font-family:'Cinzel',serif;
     letter-spacing:3px;
     cursor:pointer;
@@ -144,9 +145,9 @@ body{
 }
 
 .start-button:hover{
-    background:rgba(120,90,255,.3);
+    background:rgba(150,100,255,.35);
     box-shadow:
-        0 0 25px rgba(120,90,255,.7);
+        0 0 30px rgba(160,110,255,.8);
     transform:scale(1.06);
 }
 
@@ -182,7 +183,7 @@ body{
 
 
 /* =========================================================
-   NAVIGATION & MUSIC CONTROL WITH BOOST
+   NAVIGATION & MUSIC CONTROL
 ========================================================= */
 
 nav{
@@ -239,30 +240,23 @@ nav a:hover{
     box-shadow: 0 0 12px rgba(167, 139, 250, 0.5);
 }
 
-/* Potenciador de Audio */
-.boost-btn {
-    background: rgba(255, 180, 50, 0.12);
-    border: 1px solid rgba(255, 200, 100, 0.5);
-    color: #ffe6ad;
+.volume-control{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    color:#e2d9ff;
+    font-size:.68rem;
+    letter-spacing:1px;
+    white-space:nowrap;
 }
-
-.boost-btn:hover {
-    background: rgba(255, 180, 50, 0.3);
-    box-shadow: 0 0 14px rgba(255, 180, 50, 0.6);
+.volume-control input[type="range"]{
+    width:95px;
+    accent-color:#a78bfa;
+    cursor:pointer;
 }
-
-.boost-btn.active {
-    background: linear-gradient(135deg, #ff8c00, #d400ff);
-    color: #ffffff;
-    border-color: #ffffff;
-    box-shadow: 0 0 18px rgba(255, 140, 0, 0.85);
-    font-weight: 600;
-    animation: boostGlow 1.5s infinite alternate;
-}
-
-@keyframes boostGlow {
-    from { box-shadow: 0 0 10px rgba(255, 140, 0, 0.6); }
-    to { box-shadow: 0 0 22px rgba(212, 0, 255, 0.9); }
+#volumeValue{
+    min-width:34px;
+    text-align:right;
 }
 
 
@@ -285,15 +279,15 @@ section{
     font-size:clamp(2rem,5vw,4rem);
     text-align:center;
     margin-bottom:20px;
-    text-shadow:0 0 15px rgba(130,100,255,.35);
+    text-shadow:0 0 15px rgba(150,110,255,.4);
 }
 
 .section-subtitle{
     max-width:650px;
     text-align:center;
-    color:rgba(255,255,255,.5);
+    color:rgba(255,255,255,.55);
     line-height:1.8;
-    margin-bottom:65px;
+    margin-bottom:45px;
 }
 
 
@@ -308,8 +302,8 @@ section{
 
 .world-symbol-wrapper{
     position:relative;
-    width:180px;
-    height:180px;
+    width:200px;
+    height:200px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -319,27 +313,27 @@ section{
 .world-symbol-ring{
     position:absolute;
     inset:0;
-    border:1px solid rgba(210,195,255,.5);
+    border:1px solid rgba(180,150,255,.4);
     border-radius:50%;
     box-shadow:
-        0 0 25px rgba(120,90,255,.4),
-        inset 0 0 35px rgba(120,90,255,.2);
+        0 0 30px rgba(140,90,255,.4),
+        inset 0 0 30px rgba(140,90,255,.2);
 }
 
 .world-symbol-ring::after{
     content:"";
     position:absolute;
-    inset:-16px;
-    border:1px solid rgba(180,160,255,.25);
+    inset:-14px;
+    border:1px solid rgba(210,180,255,.25);
     border-radius:50%;
     transform:rotate(25deg);
 }
 
 .hero-kh-key{
-    width:95px;
-    height:95px;
+    width:125px;
+    height:125px;
     z-index:2;
-    filter: drop-shadow(0 0 15px #a78bfa) drop-shadow(0 0 35px #7050ff);
+    filter: drop-shadow(0 0 15px #b088ff) drop-shadow(0 0 35px #7a3cf1);
 }
 
 @keyframes floating{
@@ -357,8 +351,8 @@ section{
     font-size:clamp(2.5rem,7vw,6rem);
     letter-spacing:7px;
     text-shadow:
-        0 0 12px #8e74ff,
-        0 0 35px #4d37bd;
+        0 0 12px #9c7aff,
+        0 0 35px #5234c7;
 }
 
 .hero h2{
@@ -450,7 +444,7 @@ section{
 
 
 /* =========================================================
-   KEYBLADE SECTION (VERTICAL ORIENTATION)
+   KEYBLADE SECTION
 ========================================================= */
 
 .keyblade-section{
@@ -464,7 +458,7 @@ section{
 
 .keyblade-stage{
     width:100%;
-    min-height:540px;
+    min-height:380px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -472,11 +466,10 @@ section{
     padding: 30px 0;
 }
 
-/* Tarjeta vertical ajustada */
 .keyblade{
     position:relative;
-    width:280px;
-    height:500px;
+    width:520px;
+    height:280px;
     cursor:pointer;
     border-radius:25px;
     overflow:hidden;
@@ -500,15 +493,12 @@ section{
     transition:transform .4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow .4s ease, border-color .4s ease;
 }
 
-/* Rotación y escalado para presentar la imagen horizontal en vertical verticalmente */
 .keyblade-img{
-    height:460px;
-    width:auto;
-    max-width:none;
+    width:100%;
+    height:100%;
     display:block;
-    object-fit:contain;
-    
-    transform: rotate(-90deg) scale(1.38);
+    object-fit:cover;
+    transform: rotate(0deg) scale(1);
     image-rendering: -webkit-optimize-contrast;
     image-rendering: high-quality;
     backface-visibility: hidden;
@@ -534,268 +524,190 @@ section{
 
 
 /* =========================================================
-   LOCK
+   LOCK / KINGDOM HEARTS KEYHOLE UNLOCK
 ========================================================= */
 
 .lock-section{
     background:
         radial-gradient(
             circle at center,
-            rgba(42,35,100,.25),
+            rgba(42,35,100,.35),
             transparent 65%
         );
 }
 
-.lock-wrapper{
-    position:relative;
-    width:240px;
-    height:300px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    cursor:pointer;
-    transition:.5s;
+.keyhole-stage {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-.lock-wrapper:hover{
-    transform:scale(1.04);
+.ring {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.5s ease;
 }
 
-.lock{
-    position:relative;
-    width:180px;
-    height:215px;
-    background:
-        linear-gradient(
-            145deg,
-            #e8e3ff,
-            #8f82ca 45%,
-            #403875
-        );
-    border-radius:25px;
-    border:3px solid #d7ceff;
-    box-shadow:
-        inset 0 0 25px rgba(20,10,70,.7),
-        0 0 30px rgba(120,95,255,.5);
+.ring-outer {
+    width: 340px;
+    height: 340px;
+    border: 2px dashed rgba(200, 160, 255, 0.5);
+    box-shadow: 0 0 20px rgba(176, 136, 255, 0.3), inset 0 0 20px rgba(176, 136, 255, 0.2);
+    animation: rotateClockwise 18s linear infinite;
 }
 
-.lock::before{
-    content:"";
-    position:absolute;
-    width:110px;
-    height:110px;
-    border:13px solid #b5a7ff;
-    border-bottom:0;
-    border-radius:60px 60px 0 0;
-    top:-85px;
-    left:32px;
-    box-shadow:0 0 20px #8065ff;
+.ring-middle {
+    width: 260px;
+    height: 260px;
+    border: 3px double rgba(160, 120, 255, 0.7);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: rotateCounterClockwise 10s linear infinite;
 }
 
-.lock::after{
-    content:"";
-    position:absolute;
-    width:28px;
-    height:60px;
-    background:#29234d;
-    border-radius:20px;
-    top:83px;
-    left:75px;
-    box-shadow:0 0 10px #17132c;
+.ring-inner {
+    width: 190px;
+    height: 190px;
+    border: 2px dotted #d0b8ff;
+    box-shadow: 0 0 12px #b088ff;
+    animation: rotateClockwise 5s linear infinite;
 }
 
-.lock-symbol{
-    position:absolute;
-    top:115px;
-    left:72px;
-    font-size:35px;
-    z-index:3;
-    color:#eeeaff;
-    text-shadow:0 0 10px white;
+@keyframes rotateClockwise {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
-.lock-hint{
-    position:absolute;
-    bottom:-65px;
-    width:300px;
-    text-align:center;
-    color:rgba(255,255,255,.5);
-    font-size:.8rem;
-    letter-spacing:2px;
+@keyframes rotateCounterClockwise {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+.keyhole-wrapper {
+    position: relative;
+    width: 130px;
+    height: 190px;
+    z-index: 5;
+    filter: drop-shadow(0 0 15px rgba(176, 136, 255, 0.7));
+    transition: transform 0.3s ease;
+}
+
+.keyhole-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.flash-burst {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #ffffff 0%, #d8b8ff 35%, rgba(160, 110, 255, 0.8) 60%, rgba(255,255,255,0) 100%);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.light-ray {
+    position: absolute;
+    width: 6px;
+    height: 0px;
+    background: linear-gradient(to top, transparent, #ffffff, #cfa8ff, transparent);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9;
+    transform-origin: bottom center;
+    border-radius: 50%;
+}
+
+.unlocking .keyhole-wrapper {
+    animation: khShake 0.4s ease-in-out infinite;
+}
+
+.unlocking .ring {
+    animation-duration: 0.8s;
+    border-color: #ffffff;
+    box-shadow: 0 0 30px #b088ff;
+}
+
+@keyframes khShake {
+    0% { transform: translate(0, 0) scale(1); }
+    20% { transform: translate(-4px, 4px) scale(1.05); }
+    40% { transform: translate(4px, -4px) scale(1.05); }
+    60% { transform: translate(-4px, -4px) scale(1.1); }
+    80% { transform: translate(4px, 4px) scale(1.1); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+.unlocked .flash-burst {
+    animation: kingdomUnlock 1.8s forwards ease-out;
+}
+
+@keyframes kingdomUnlock {
+    0% {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+        width: 800px;
+        height: 800px;
+        box-shadow: 0 0 120px 60px #fff;
+    }
+    100% {
+        width: 1600px;
+        height: 1600px;
+        opacity: 0;
+    }
+}
+
+.lock-btn {
+    margin-top: 30px;
+    padding: 12px 32px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #a77bff, #6431e5);
+    border: 1px solid #e1d4ff;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(160, 110, 255, 0.5);
+    transition: all 0.3s ease;
+    z-index: 20;
+}
+
+.lock-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 30px rgba(180, 130, 255, 0.95);
+    background: linear-gradient(135deg, #be99ff, #7a3cf1);
 }
 
 
 /* =========================================================
-   MINI GAME
+   PHOTO REVEAL — RECUERDO DESBLOQUEADO
 ========================================================= */
 
-#game{
-    display:none;
-    position:fixed;
-    inset:0;
-    z-index:5000;
-    background:
-        radial-gradient(
-            circle,
-            #17143c,
-            #050612 70%
-        );
-    overflow:auto;
-    padding:80px 20px;
-}
-
-#game.active{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-
-.game-top{
-    width:100%;
-    max-width:1000px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:30px;
-}
-
-.game-title{
-    font-family:'Cinzel',serif;
-    font-size:clamp(1.5rem,4vw,2.8rem);
-}
-
-.close-game{
-    background:none;
-    border:1px solid rgba(255,255,255,.3);
-    color:white;
-    padding:10px 18px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.close-game:hover{
-    background:rgba(255,255,255,.1);
-}
-
-.level-counter{
-    color:#bdb0ff;
-    letter-spacing:3px;
-    font-size:.8rem;
-}
-
-.difference-description{
-    color:rgba(255,255,255,.55);
-    margin-bottom:30px;
-    text-align:center;
-}
-
-.game-board{
-    width:100%;
-    max-width:1000px;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-}
-
-.scene{
-    position:relative;
-    aspect-ratio:16/10;
-    overflow:hidden;
-    border:1px solid rgba(200,190,255,.35);
-    background:
-        linear-gradient(
-            135deg,
-            #171b43,
-            #30245c
-        );
-    box-shadow:0 0 30px rgba(80,60,180,.2);
-}
-
-.scene::before{
-    content:"";
-    position:absolute;
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    background:#aaa0ff;
-    top:15%;
-    left:15%;
-    box-shadow:
-        150px 100px 0 -25px #695ab4,
-        300px 20px 0 -40px #d1caff;
-}
-
-.scene::after{
-    content:"";
-    position:absolute;
-    width:80%;
-    height:25%;
-    bottom:0;
-    left:10%;
-    background:
-        linear-gradient(
-            #393363,
-            #15162c
-        );
-    border-radius:50% 50% 0 0;
-}
-
-.difference{
-    position:absolute;
-    width:28px;
-    height:28px;
-    border:2px solid transparent;
-    border-radius:50%;
-    cursor:pointer;
-    z-index:10;
-    transition:.3s;
-}
-
-.difference:hover{
-    border-color:rgba(255,255,255,.5);
-}
-
-.difference.found{
-    border-color:#fff;
-    box-shadow:0 0 15px #bbaeff;
-    animation:found .5s ease;
-}
-
-@keyframes found{
-    0%{
-        transform:scale(.5);
-    }
-    100%{
-        transform:scale(1.2);
-    }
-}
-
-.game-status{
-    margin-top:30px;
-    text-align:center;
-    color:rgba(255,255,255,.6);
-}
-
-.progress{
-    margin-top:15px;
-    width:300px;
-    max-width:80vw;
-    height:5px;
-    background:rgba(255,255,255,.1);
-}
-
-.progress-bar{
-    height:100%;
-    width:0%;
-    background:
-        linear-gradient(
-            90deg,
-            #6d54d9,
-            #d4cbff
-        );
-    box-shadow:0 0 10px #8d76ff;
-    transition:.5s;
-}
+#photoReveal{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:24px;background:radial-gradient(circle at center,rgba(65,47,130,.48),rgba(2,3,10,.96) 62%,#010207 100%);backdrop-filter:blur(12px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .7s ease,visibility .7s ease}
+#photoReveal.active{opacity:1;visibility:visible;pointer-events:auto}
+.photo-light{position:absolute;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 0 30px #fff,0 0 90px #a78bfa,0 0 180px #7050ff;animation:photoLight .9s ease-out forwards}
+.photo-card{position:relative;width:min(680px,92vw);max-height:90vh;overflow:auto;padding:24px 24px 30px;text-align:center;border:1px solid rgba(255,255,255,.22);border-radius:24px;background:linear-gradient(145deg,rgba(22,20,49,.96),rgba(5,7,20,.98));box-shadow:0 0 35px rgba(167,139,250,.28),0 25px 100px rgba(0,0,0,.7),inset 0 0 35px rgba(112,80,255,.08);transform:translateY(30px) scale(.92);transition:transform .75s cubic-bezier(.16,1,.3,1)}
+#photoReveal.active .photo-card{transform:translateY(0) scale(1)}
+.photo-frame{position:relative;width:100%;max-height:60vh;overflow:hidden;border-radius:16px;border:2px solid rgba(255,255,255,.55);box-shadow:0 0 25px rgba(167,139,250,.45),0 0 70px rgba(112,80,255,.2);background:#03040c}
+.photo-frame img{display:block;width:100%;max-height:60vh;object-fit:contain}
+.close-photo{position:absolute;top:10px;right:10px;z-index:3;width:40px;height:40px;border:1px solid rgba(255,255,255,.3);border-radius:50%;color:#fff;background:rgba(0,0,0,.55);font-size:27px;cursor:pointer;transition:.25s ease}
+.close-photo:hover{background:rgba(167,139,250,.35);transform:scale(1.08)}
+.photo-crown-svg{width:50px;height:50px;margin-top:15px;filter:drop-shadow(0 0 8px #b088ff)}
+.photo-card h2{margin-top:8px;font-family:'Cinzel',serif;font-size:clamp(1.2rem,3vw,1.8rem);letter-spacing:2px}
+.photo-card p{margin-top:12px;color:rgba(255,255,255,.72);line-height:1.7}
+@keyframes photoLight{0%{transform:scale(.1);opacity:1}100%{transform:scale(45);opacity:0}}
 
 
 /* =========================================================
@@ -850,11 +762,11 @@ section{
 ========================================================= */
 
 .final-key-container{
-    width:100px;
-    height:100px;
+    width:120px;
+    height:120px;
     margin:0 auto;
     animation:finalPulse 2.2s infinite;
-    filter: drop-shadow(0 0 15px #a78bfa) drop-shadow(0 0 50px #7050ff);
+    filter: drop-shadow(0 0 15px #b088ff) drop-shadow(0 0 50px #7a3cf1);
 }
 
 @keyframes finalPulse{
@@ -932,12 +844,10 @@ section{
     section{
         padding:100px 20px;
     }
+
     .keyblade{
-        width: 240px;
-        height: 420px;
-    }
-    .keyblade-img{
-        height: 380px;
+        width: 90vw;
+        height: 200px;
     }
     .story-card{
         padding:30px 25px;
@@ -945,9 +855,13 @@ section{
     .letter{
         padding:45px 25px;
     }
-    .game-board{
-        grid-template-columns:1fr;
+    .keyhole-stage{
+        width: 300px;
+        height: 300px;
     }
+    .ring-outer{ width: 280px; height: 280px; }
+    .ring-middle{ width: 220px; height: 220px; }
+    .ring-inner{ width: 150px; height: 150px; }
 }
 
 </style>
@@ -964,14 +878,14 @@ section{
 
 <iframe 
     id="bg-music" 
-    src="" 
-    allow="autoplay" 
+    src="https://www.youtube.com/embed/im5tc4fcg5w?enablejsapi=1&autoplay=0&controls=0&rel=0&playsinline=1"
+    allow="autoplay; encrypted-media" 
     style="position: fixed; width: 1px; height: 1px; opacity: 0; pointer-events: none; border: 0; z-index: -100;">
 </iframe>
 
 
 <!-- =========================================================
-     INTRO (CON EMBLEMA DE LLAVE/KEYBLADE)
+     INTRO (CON EMBLEMA FIEL DEL CORAZÓN Y CORONA DE KH)
 ========================================================= -->
 
 <div id="intro">
@@ -979,20 +893,19 @@ section{
     <div class="intro-key-container">
         <svg class="kh-key-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <defs>
-                <linearGradient id="keyGradientIntro" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="khHeartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="0%" stop-color="#ffffff" />
-                    <stop offset="30%" stop-color="#d8ccff" />
-                    <stop offset="70%" stop-color="#9d86ff" />
-                    <stop offset="100%" stop-color="#6348d8" />
+                    <stop offset="30%" stop-color="#e2d2ff" />
+                    <stop offset="70%" stop-color="#a472ff" />
+                    <stop offset="100%" stop-color="#5a22c9" />
                 </linearGradient>
             </defs>
-            <!-- Corona superior / Mango estilo KH -->
-            <path d="M 50 8 C 41 8 33 14 33 24 C 33 32 40 37 45 40 L 45 78 C 42 78 38 78 38 82 C 38 85 42 85 45 85 L 45 92 L 55 92 L 55 85 C 58 85 62 85 62 82 C 62 78 58 78 55 78 L 55 68 L 68 68 L 68 60 L 55 60 L 55 52 L 65 52 L 65 45 L 55 45 L 55 40 C 60 37 67 32 67 24 C 67 14 59 8 50 8 Z M 50 16 C 56 16 60 19 60 24 C 60 29 55 32 50 35 C 45 32 40 29 40 24 C 40 19 44 16 50 16 Z" 
-                  fill="url(#keyGradientIntro)" 
-                  stroke="#ffffff" 
-                  stroke-width="1.5"/>
-            <!-- Corazón interior central -->
-            <path d="M 50 21 C 47 18 43 19 43 22 C 43 25 50 29 50 29 C 50 29 57 25 57 22 C 57 19 53 18 50 21 Z" fill="#ffffff" opacity="0.9"/>
+            <!-- Corona superior KH -->
+            <path d="M 36 26 L 42 16 L 50 22 L 58 16 L 64 26 L 50 23 Z" fill="url(#khHeartGrad)" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"/>
+            <!-- Borde exterior corazón de neón -->
+            <path d="M 50 90 C 20 68 12 42 28 30 C 38 22 47 31 50 35 C 53 31 62 22 72 30 C 88 42 80 68 50 90 Z" fill="none" stroke="url(#khHeartGrad)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Trazado interior exacto con las espirales/filigrana arriba -->
+            <path d="M 50 82 C 26 63 18 42 32 32 C 40 26 47 33 47 38 C 47 43 41 44 38 41 C 36 39 37 36 40 36 C 41 36 42 37 41 38 M 50 82 C 74 63 82 42 68 32 C 60 26 53 33 53 38 C 53 43 59 44 62 41 C 64 39 63 36 60 36 C 59 36 58 37 59 38" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
         </svg>
     </div>
 
@@ -1019,11 +932,15 @@ section{
     <a href="#home">INICIO</a>
     <a href="#story">NUESTRA HISTORIA</a>
     <a href="#keyblade">KEYBLADE</a>
-    <a href="#lock-section">SECRETO</a>
+    <a href="#lock-section">CERRADURA</a>
     
     <div class="nav-audio-group">
         <button class="music-btn" id="musicToggle" onclick="toggleMusic()">🎵 MÚSICA: ON</button>
-        <button class="music-btn boost-btn" id="boostToggle" onclick="toggleAudioBoost()">⚡ BOOST: OFF</button>
+        <label class="volume-control" title="Volumen de la música">
+            <span>🔊</span>
+            <input id="volumeSlider" type="range" min="0" max="100" value="70" step="1" aria-label="Volumen de la música">
+            <span id="volumeValue">70%</span>
+        </label>
     </div>
 </nav>
 
@@ -1038,18 +955,16 @@ section{
         <div class="world-symbol-ring"></div>
         <svg class="hero-kh-key" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <defs>
-                <linearGradient id="keyGradientHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="khHeartGradHero" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="0%" stop-color="#ffffff" />
-                    <stop offset="25%" stop-color="#e4ddff" />
-                    <stop offset="65%" stop-color="#a78bfa" />
-                    <stop offset="100%" stop-color="#5535db" />
+                    <stop offset="30%" stop-color="#e2d2ff" />
+                    <stop offset="70%" stop-color="#a472ff" />
+                    <stop offset="100%" stop-color="#5a22c9" />
                 </linearGradient>
             </defs>
-            <path d="M 50 8 C 41 8 33 14 33 24 C 33 32 40 37 45 40 L 45 78 C 42 78 38 78 38 82 C 38 85 42 85 45 85 L 45 92 L 55 92 L 55 85 C 58 85 62 85 62 82 C 62 78 58 78 55 78 L 55 68 L 68 68 L 68 60 L 55 60 L 55 52 L 65 52 L 65 45 L 55 45 L 55 40 C 60 37 67 32 67 24 C 67 14 59 8 50 8 Z M 50 16 C 56 16 60 19 60 24 C 60 29 55 32 50 35 C 45 32 40 29 40 24 C 40 19 44 16 50 16 Z" 
-                  fill="url(#keyGradientHero)" 
-                  stroke="#ffffff" 
-                  stroke-width="1.8"/>
-            <path d="M 50 21 C 47 18 43 19 43 22 C 43 25 50 29 50 29 C 50 29 57 25 57 22 C 57 19 53 18 50 21 Z" fill="#ffffff" opacity="0.95"/>
+            <path d="M 36 26 L 42 16 L 50 22 L 58 16 L 64 26 L 50 23 Z" fill="url(#khHeartGradHero)" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M 50 90 C 20 68 12 42 28 30 C 38 22 47 31 50 35 C 53 31 62 22 72 30 C 88 42 80 68 50 90 Z" fill="none" stroke="url(#khHeartGradHero)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 50 82 C 26 63 18 42 32 32 C 40 26 47 33 47 38 C 47 43 41 44 38 41 C 36 39 37 36 40 36 C 41 36 42 37 41 38 M 50 82 C 74 63 82 42 68 32 C 60 26 53 33 53 38 C 53 43 59 44 62 41 C 64 39 63 36 60 36 C 59 36 58 37 59 38" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
         </svg>
     </div>
 
@@ -1153,7 +1068,7 @@ section{
 
 
 <!-- =========================================================
-     KEYBLADE SECTION (VERTICAL)
+     KEYBLADE SECTION
 ========================================================= -->
 
 <section id="keyblade" class="keyblade-section">
@@ -1170,7 +1085,7 @@ section{
         <div class="keyblade" onclick="keybladeClick(event)" title="Una Keyblade creada por nuestros corazones">
             <img 
                 src="https://i.postimg.cc/FK2D50NB/Gemini-Generated-Image-3e77es3e77es3e77.jpg" 
-                alt="Nuestra Keyblade Violeta Vertical" 
+                alt="Nuestra Keyblade Violeta" 
                 class="keyblade-img"
             >
         </div>
@@ -1184,27 +1099,94 @@ section{
 
 
 <!-- =========================================================
-     LOCK
+     LOCK / KINGDOM HEARTS KEYHOLE UNLOCK
 ========================================================= -->
 
 <section id="lock-section" class="lock-section">
 
-    <h2 class="section-title">Un recuerdo escondido</h2>
+    <h2 class="section-title">Liberar la cerradura</h2>
 
     <p class="section-subtitle">
-        Algunas cosas no se encuentran simplemente mirando.
-        <br><br>
-        Hay que buscarlas.
+        Sostén la luz de tu corazón y libera la cerradura de este mundo.
     </p>
 
-    <div class="lock-wrapper" onclick="openGame()">
-        <div class="lock">
-            <div class="lock-symbol">🔑</div>
+    <div class="keyhole-stage" id="keyholeStage" onclick="triggerUnlock()">
+        <!-- Anillos Giratorios -->
+        <div class="ring ring-outer"></div>
+        <div class="ring ring-middle"></div>
+        <div class="ring ring-inner"></div>
+
+        <!-- Ojo de la cerradura -->
+        <div class="keyhole-wrapper">
+            <svg class="keyhole-svg" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="purpleBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ffffff"/>
+                        <stop offset="50%" stop-color="#b088ff"/>
+                        <stop offset="100%" stop-color="#4a18a5"/>
+                    </linearGradient>
+                    <radialGradient id="keyholeCore" cx="50%" cy="40%" r="60%">
+                        <stop offset="0%" stop-color="#fffae6"/>
+                        <stop offset="25%" stop-color="#cb9eff"/>
+                        <stop offset="65%" stop-color="#1a0033"/>
+                        <stop offset="100%" stop-color="#020205"/>
+                    </radialGradient>
+                </defs>
+
+                <!-- Marco púrpura/dorado -->
+                <path d="M 50 10 
+                         A 35 35 0 0 1 78 62 
+                         L 88 132 
+                         A 8 8 0 0 1 80 142 
+                         L 20 142 
+                         A 8 8 0 0 1 12 132 
+                         L 22 62 
+                         A 35 35 0 0 1 50 10 Z" 
+                      fill="url(#purpleBorder)" 
+                      stroke="#ffffff" 
+                      stroke-width="1.5"/>
+
+                <!-- Núcleo interior -->
+                <path d="M 50 18 
+                         A 27 27 0 0 1 71 58 
+                         L 80 128 
+                         L 20 128 
+                         L 29 58 
+                         A 27 27 0 0 1 50 18 Z" 
+                      fill="url(#keyholeCore)" 
+                      stroke="#2d0b5e" 
+                      stroke-width="2"/>
+            </svg>
         </div>
-        <div class="lock-hint">HACÉ CLICK PARA ABRIR</div>
+
+        <!-- Destello de luz KH -->
+        <div class="flash-burst" id="flashBurst"></div>
     </div>
 
+    <button class="lock-btn" onclick="triggerUnlock()">LIBERAR CERRADURA</button>
+
 </section>
+
+
+<!-- =========================================================
+     PHOTO REVEAL — SE ABRE AL LIBERAR LA KEYHOLE
+========================================================= -->
+<div id="photoReveal" aria-hidden="true">
+    <div class="photo-light"></div>
+    <div class="photo-card">
+        <button class="close-photo" type="button" onclick="closePhoto()" aria-label="Cerrar">×</button>
+        <div class="photo-frame">
+            <img src="https://i.postimg.cc/rw3DHYjq/Whats-App-Image-2026-10-06-at-1-41-05-AM.jpg" alt="Una foto de nosotros">
+        </div>
+        <svg class="photo-crown-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 36 26 L 42 16 L 50 22 L 58 16 L 64 26 L 50 23 Z" fill="url(#khHeartGrad)" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M 50 90 C 20 68 12 42 28 30 C 38 22 47 31 50 35 C 53 31 62 22 72 30 C 88 42 80 68 50 90 Z" fill="none" stroke="url(#khHeartGrad)" stroke-width="6.5"/>
+            <path d="M 50 82 C 26 63 18 42 32 32 C 40 26 47 33 47 38 C 47 43 41 44 38 41 C 36 39 37 36 40 36 M 50 82 C 74 63 82 42 68 32 C 60 26 53 33 53 38 C 53 43 59 44 62 41 C 64 39 63 36 60 36" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+        </svg>
+        <h2>Un pedacito de nosotros</h2>
+        <p>Entre partidas, llamadas y pequeñas coincidencias, terminamos encontrando algo que vale la pena cuidar. ❤️<br>Y esto recién empieza.</p>
+    </div>
+</div>
 
 
 <!-- =========================================================
@@ -1245,11 +1227,9 @@ section{
 
     <div class="final-key-container">
         <svg class="kh-key-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 50 8 C 41 8 33 14 33 24 C 33 32 40 37 45 40 L 45 78 C 42 78 38 78 38 82 C 38 85 42 85 45 85 L 45 92 L 55 92 L 55 85 C 58 85 62 85 62 82 C 62 78 58 78 55 78 L 55 68 L 68 68 L 68 60 L 55 60 L 55 52 L 65 52 L 65 45 L 55 45 L 55 40 C 60 37 67 32 67 24 C 67 14 59 8 50 8 Z M 50 16 C 56 16 60 19 60 24 C 60 29 55 32 50 35 C 45 32 40 29 40 24 C 40 19 44 16 50 16 Z" 
-                  fill="url(#keyGradientHero)" 
-                  stroke="#ffffff" 
-                  stroke-width="1.8"/>
-            <path d="M 50 21 C 47 18 43 19 43 22 C 43 25 50 29 50 29 C 50 29 57 25 57 22 C 57 19 53 18 50 21 Z" fill="#ffffff" opacity="0.95"/>
+            <path d="M 36 26 L 42 16 L 50 22 L 58 16 L 64 26 L 50 23 Z" fill="url(#khHeartGrad)" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M 50 90 C 20 68 12 42 28 30 C 38 22 47 31 50 35 C 53 31 62 22 72 30 C 88 42 80 68 50 90 Z" fill="none" stroke="url(#khHeartGrad)" stroke-width="6.5"/>
+            <path d="M 50 82 C 26 63 18 42 32 32 C 40 26 47 33 47 38 C 47 43 41 44 38 41 C 36 39 37 36 40 36 M 50 82 C 74 63 82 42 68 32 C 60 26 53 33 53 38 C 53 43 59 44 62 41 C 64 39 63 36 60 36" fill="none" stroke="#ffffff" stroke-width="2.5"/>
         </svg>
     </div>
 
@@ -1270,115 +1250,117 @@ section{
 </section>
 
 
-<!-- =========================================================
-     MINI GAME
-========================================================= -->
-
-<div id="game">
-
-    <div class="game-top">
-        <div>
-            <div class="level-counter">NIVEL <span id="levelNumber">1</span> / 10</div>
-            <div class="game-title">Encuentra las diferencias</div>
-        </div>
-        <button class="close-game" onclick="closeGame()">CERRAR</button>
-    </div>
-
-    <p class="difference-description">
-        Hay una diferencia escondida en cada lado. Encontrala para continuar.
-    </p>
-
-    <div class="game-board">
-        <div class="scene" id="sceneLeft"></div>
-        <div class="scene" id="sceneRight"></div>
-    </div>
-
-    <div class="game-status">
-        <span id="gameMessage">Encontrá la diferencia ❤️</span>
-        <div class="progress">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
-    </div>
-
-</div>
-
-
 <script>
 
 /* =========================================================
-   INTRO & MUSIC PLAYBACK WITH AUDIO BOOST
+   INTRO & MUSIC PLAYBACK / VOLUME
 ========================================================= */
 
 let isMusicPlaying = false;
-let isAudioBoosted = false;
-const baseYoutubeUrl = "https://www.youtube.com/embed/im5tc4fcg5w?autoplay=1&start=66&enablejsapi=1";
+let musicPlayer = null;
+let youtubeReady = false;
+let musicVolume = 70;
+
+function loadYouTubeAPI(){
+    if(window.YT && window.YT.Player){
+        createMusicPlayer();
+        return;
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://www.youtube.com/iframe_api';
+    script.async = true;
+    document.head.appendChild(script);
+
+    const previousReady = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = function(){
+        if(typeof previousReady === 'function') previousReady();
+        createMusicPlayer();
+    };
+}
+
+function createMusicPlayer(){
+    if(musicPlayer || !window.YT || !window.YT.Player) return;
+
+    musicPlayer = new YT.Player('bg-music', {
+        events: {
+            onReady: function(event){
+                youtubeReady = true;
+                event.target.setVolume(musicVolume);
+            }
+        },
+        playerVars: {
+            start: 66,
+            controls: 0,
+            rel: 0,
+            playsinline: 1
+        }
+    });
+}
 
 function startExperience(){
-    document.getElementById("intro").classList.add("hidden");
+    document.getElementById('intro').classList.add('hidden');
     createParticles(window.innerWidth / 2, window.innerHeight / 2);
-    
-    // Inicia la música de Sanctuary desde el seg 66
-    const audioIframe = document.getElementById("bg-music");
-    audioIframe.src = baseYoutubeUrl;
-    isMusicPlaying = true;
+
+    setTimeout(() => {
+        if(youtubeReady && musicPlayer){
+            musicPlayer.setVolume(musicVolume);
+            musicPlayer.playVideo();
+            isMusicPlaying = true;
+            document.getElementById('musicToggle').textContent = '🎵 MÚSICA: ON';
+        } else {
+            const waitForPlayer = setInterval(() => {
+                if(youtubeReady && musicPlayer){
+                    clearInterval(waitForPlayer);
+                    musicPlayer.setVolume(musicVolume);
+                    musicPlayer.playVideo();
+                    isMusicPlaying = true;
+                    document.getElementById('musicToggle').textContent = '🎵 MÚSICA: ON';
+                }
+            }, 250);
+            setTimeout(() => clearInterval(waitForPlayer), 8000);
+        }
+    }, 150);
 }
 
 function toggleMusic(){
-    const audioIframe = document.getElementById("bg-music");
-    const musicBtn = document.getElementById("musicToggle");
+    const musicBtn = document.getElementById('musicToggle');
+
+    if(!youtubeReady || !musicPlayer){
+        loadYouTubeAPI();
+        return;
+    }
 
     if(isMusicPlaying){
-        audioIframe.src = "";
-        musicBtn.textContent = "🔇 MÚSICA: OFF";
+        musicPlayer.pauseVideo();
+        musicBtn.textContent = '🔇 MÚSICA: OFF';
         isMusicPlaying = false;
     } else {
-        audioIframe.src = baseYoutubeUrl;
-        musicBtn.textContent = "🎵 MÚSICA: ON";
+        musicPlayer.setVolume(musicVolume);
+        musicPlayer.playVideo();
+        musicBtn.textContent = '🎵 MÚSICA: ON';
         isMusicPlaying = true;
-        if(isAudioBoosted) {
-            setTimeout(applyBoostCommand, 1000);
-        }
     }
 }
 
-// Potenciador de Audio (Audio Booster)
-function toggleAudioBoost(){
-    const boostBtn = document.getElementById("boostToggle");
-    
-    isAudioBoosted = !isAudioBoosted;
+function setMusicVolume(value){
+    const numericValue = Math.max(0, Math.min(100, Number(value) || 0));
+    musicVolume = numericValue;
 
-    if(isAudioBoosted){
-        boostBtn.classList.add("active");
-        boostBtn.textContent = "⚡ BOOST: +200% 🔥";
-        applyBoostCommand();
-    } else {
-        boostBtn.classList.remove("active");
-        boostBtn.textContent = "⚡ BOOST: OFF";
-        applyNormalVolumeCommand();
+    document.getElementById('volumeValue').textContent = numericValue + '%';
+
+    if(youtubeReady && musicPlayer){
+        musicPlayer.setVolume(numericValue);
     }
 }
 
-function applyBoostCommand(){
-    const iframe = document.getElementById("bg-music");
-    if(iframe && iframe.contentWindow){
-        // Envía comando postMessage a la API de Youtube Iframe para llevar volumen al 100% y potenciar
-        iframe.contentWindow.postMessage(JSON.stringify({
-            event: 'command',
-            func: 'setVolume',
-            args: [100]
-        }), '*');
-    }
-}
+loadYouTubeAPI();
 
-function applyNormalVolumeCommand(){
-    const iframe = document.getElementById("bg-music");
-    if(iframe && iframe.contentWindow){
-        iframe.contentWindow.postMessage(JSON.stringify({
-            event: 'command',
-            func: 'setVolume',
-            args: [70]
-        }), '*');
-    }
+const volumeSlider = document.getElementById('volumeSlider');
+if(volumeSlider){
+    volumeSlider.addEventListener('input', (event) => {
+        setMusicVolume(event.target.value);
+    });
 }
 
 
@@ -1457,67 +1439,61 @@ function keybladeClick(event){
 
 
 /* =========================================================
-   LOCK / GAME
+   KEYHOLE UNLOCK ANIMATION (KINGDOM HEARTS)
 ========================================================= */
 
-let currentLevel = 1;
-const totalLevels = 10;
+const stage = document.getElementById('keyholeStage');
 
-const levels = [
-    { left: ["22%", "25%"], right: ["68%", "58%"] },
-    { left: ["42%", "35%"], right: ["20%", "70%"] },
-    { left: ["15%", "60%"], right: ["75%", "25%"] },
-    { left: ["55%", "20%"], right: ["30%", "65%"] },
-    { left: ["30%", "45%"], right: ["80%", "40%"] },
-    { left: ["70%", "70%"], right: ["15%", "15%"] },
-    { left: ["25%", "80%"], right: ["50%", "30%"] },
-    { left: ["60%", "30%"], right: ["40%", "75%"] },
-    { left: ["35%", "15%"], right: ["65%", "85%"] },
-    { left: ["80%", "50%"], right: ["25%", "45%"] }
-];
-
-function openGame(){
-    document.getElementById("game").classList.add("active");
-    document.body.style.overflow = "hidden";
-    currentLevel = 1;
-    loadLevel(currentLevel);
+const rayCount = 16;
+for (let i = 0; i < rayCount; i++) {
+    const ray = document.createElement('div');
+    ray.classList.add('light-ray');
+    const angle = (360 / rayCount) * i;
+    ray.style.transform = `rotate(${angle}deg)`;
+    stage.appendChild(ray);
 }
 
-function closeGame(){
-    document.getElementById("game").classList.remove("active");
-    document.body.style.overflow = "auto";
-}
-
-function loadLevel(levelIndex){
-    const levelData = levels[levelIndex - 1];
-    document.getElementById("levelNumber").textContent = levelIndex;
-    const sceneLeft = document.getElementById("sceneLeft");
-    const sceneRight = document.getElementById("sceneRight");
-
-    sceneLeft.innerHTML = `<div class="difference" style="left:${levelData.left[0]};top:${levelData.left[1]}" onclick="foundDifference(event)"></div>`;
-    sceneRight.innerHTML = `<div class="difference" style="left:${levelData.right[0]};top:${levelData.right[1]}" onclick="foundDifference(event)"></div>`;
-
-    document.getElementById("gameMessage").textContent = "Encontrá la diferencia ❤";
-    document.getElementById("progressBar").style.width = (((levelIndex - 1) / totalLevels) * 100) + "%";
-}
-
-function foundDifference(event){
-    event.stopPropagation();
-    event.target.classList.add("found");
-    createParticles(event.clientX, event.clientY);
-    document.getElementById("gameMessage").textContent = "¡Excelente! Nivel superado ✨";
-    document.getElementById("progressBar").style.width = ((currentLevel / totalLevels) * 100) + "%";
+function triggerUnlock() {
+    if (stage.classList.contains('unlocking')) return;
+    stage.classList.add('unlocking');
 
     setTimeout(() => {
-        if(currentLevel < totalLevels){
-            currentLevel++;
-            loadLevel(currentLevel);
-        } else {
-            document.getElementById("gameMessage").textContent = "¡Felicitaciones! Has completado nuestra historia ❤️";
-            setTimeout(closeGame, 2200);
-        }
-    }, 1000);
+        stage.classList.remove('unlocking');
+        stage.classList.add('unlocked');
+
+        const rays = document.querySelectorAll('.light-ray');
+        rays.forEach((ray, index) => {
+            ray.animate([
+                { height: '0px', opacity: 0 },
+                { height: '300px', opacity: 1, offset: 0.4 },
+                { height: '600px', opacity: 0 }
+            ], { duration: 1600, easing: 'cubic-bezier(0.1, 0.8, 0.3, 1)', delay: index * 20 });
+        });
+
+        const rect = stage.getBoundingClientRect();
+        createParticles(rect.left + rect.width / 2, rect.top + rect.height / 2);
+
+        setTimeout(() => {
+            const reveal = document.getElementById('photoReveal');
+            reveal.classList.add('active');
+            reveal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }, 650);
+
+        setTimeout(() => stage.classList.remove('unlocked'), 2200);
+    }, 800);
 }
+
+function closePhoto(){
+    const reveal = document.getElementById('photoReveal');
+    reveal.classList.remove('active');
+    reveal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (event) => {
+    if(event.key === 'Escape') closePhoto();
+});
 
 </script>
 
