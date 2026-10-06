@@ -86,34 +86,34 @@ body{
     pointer-events:none;
 }
 
-.intro-heart-container{
+.intro-key-container{
     position:relative;
-    width:100px;
-    height:100px;
+    width:110px;
+    height:110px;
     display:flex;
     justify-content:center;
     align-items:center;
-    animation:heartPulse 2s infinite ease-in-out;
+    animation:keyPulse 2.2s infinite ease-in-out;
 }
 
-.kh-heart-svg{
+.kh-key-svg{
     width:100%;
     height:100%;
-    filter: drop-shadow(0 0 12px #a78bfa) drop-shadow(0 0 30px #7050ff);
+    filter: drop-shadow(0 0 12px #a78bfa) drop-shadow(0 0 32px #7050ff);
 }
 
-@keyframes heartPulse{
+@keyframes keyPulse{
     0%,100%{
-        transform:scale(1);
+        transform:scale(1) rotate(0deg);
     }
     50%{
-        transform:scale(1.15);
+        transform:scale(1.12) rotate(-4deg);
     }
 }
 
 .intro-text{
     text-align:center;
-    margin-top:40px;
+    margin-top:35px;
 }
 
 .intro-text h1{
@@ -182,7 +182,7 @@ body{
 
 
 /* =========================================================
-   NAVIGATION & MUSIC CONTROL
+   NAVIGATION & MUSIC CONTROL WITH BOOST
 ========================================================= */
 
 nav{
@@ -195,15 +195,16 @@ nav{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:rgba(3,5,14,.55);
+    background:rgba(3,5,14,.65);
     backdrop-filter:blur(12px);
     border-bottom:1px solid rgba(255,255,255,.08);
+    padding: 0 15px;
 }
 
 nav a{
     color:rgba(255,255,255,.65);
     text-decoration:none;
-    margin:0 18px;
+    margin:0 15px;
     font-size:.75rem;
     letter-spacing:2px;
     transition:.3s;
@@ -214,22 +215,53 @@ nav a:hover{
     text-shadow:0 0 10px #a78bfa;
 }
 
+.nav-audio-group{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-left:12px;
+}
+
 .music-btn {
     background: rgba(167, 139, 250, 0.15);
     border: 1px solid rgba(185, 166, 255, 0.4);
     color: #e2d9ff;
-    padding: 6px 14px;
+    padding: 6px 12px;
     font-size: 0.7rem;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     border-radius: 20px;
     cursor: pointer;
-    margin-left: 10px;
     transition: 0.3s ease;
 }
 
 .music-btn:hover {
     background: rgba(167, 139, 250, 0.35);
     box-shadow: 0 0 12px rgba(167, 139, 250, 0.5);
+}
+
+.boost-btn {
+    background: rgba(255, 180, 50, 0.12);
+    border: 1px solid rgba(255, 200, 100, 0.5);
+    color: #ffe6ad;
+}
+
+.boost-btn:hover {
+    background: rgba(255, 180, 50, 0.3);
+    box-shadow: 0 0 14px rgba(255, 180, 50, 0.6);
+}
+
+.boost-btn.active {
+    background: linear-gradient(135deg, #ff8c00, #d400ff);
+    color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 18px rgba(255, 140, 0, 0.85);
+    font-weight: 600;
+    animation: boostGlow 1.5s infinite alternate;
+}
+
+@keyframes boostGlow {
+    from { box-shadow: 0 0 10px rgba(255, 140, 0, 0.6); }
+    to { box-shadow: 0 0 22px rgba(212, 0, 255, 0.9); }
 }
 
 
@@ -302,7 +334,7 @@ section{
     transform:rotate(25deg);
 }
 
-.hero-kh-heart{
+.hero-kh-key{
     width:95px;
     height:95px;
     z-index:2;
@@ -417,7 +449,7 @@ section{
 
 
 /* =========================================================
-   KEYBLADE SECTION (MEJORADA PARA ALTA RESOLUCIÓN)
+   KEYBLADE SECTION (VERTICAL ORIENTATION)
 ========================================================= */
 
 .keyblade-section{
@@ -431,30 +463,33 @@ section{
 
 .keyblade-stage{
     width:100%;
-    min-height:450px;
+    min-height:540px;
     display:flex;
     justify-content:center;
     align-items:center;
     perspective:1000px;
-    padding: 20px 0;
+    padding: 30px 0;
 }
 
 .keyblade{
     position:relative;
-    width:90%;
-    max-width:650px; /* Evita sobre-expandir la imagen */
+    width:280px;
+    height:500px;
     cursor:pointer;
-    border-radius:20px;
+    border-radius:25px;
     overflow:hidden;
-    background:rgba(12, 10, 28, 0.6);
-    backdrop-filter:blur(8px);
-    border:1px solid rgba(210, 195, 255, 0.4);
+    background:rgba(12, 10, 28, 0.65);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(210, 195, 255, 0.45);
     box-shadow: 
         0 15px 35px rgba(0, 0, 0, 0.6),
         0 0 35px rgba(160, 110, 255, 0.35),
         inset 0 0 20px rgba(180, 140, 255, 0.15);
 
-    /* Aceleración por GPU para nitidez máxima en animaciones */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
     transform: translateZ(0);
     backface-visibility: hidden;
     will-change: transform;
@@ -464,27 +499,25 @@ section{
 }
 
 .keyblade-img{
-    width:100%;
-    height:auto;
-    max-height:70vh;
+    height:460px;
+    width:auto;
+    max-width:none;
     display:block;
-    object-fit:contain; /* Mantiene proporciones sin distorsionar */
+    object-fit:contain;
     
-    /* Filtros de nitidez del navegador */
+    transform: rotate(-90deg) scale(1.38);
     image-rendering: -webkit-optimize-contrast;
     image-rendering: high-quality;
-    
-    transform: translateZ(0);
     backface-visibility: hidden;
 }
 
 .keyblade:hover{
     box-shadow: 
         0 20px 45px rgba(0, 0, 0, 0.7),
-        0 0 50px rgba(190, 140, 255, 0.8),
+        0 0 50px rgba(190, 140, 255, 0.85),
         0 0 90px rgba(130, 90, 255, 0.5);
-    border-color: rgba(255, 255, 255, 0.7);
-    transform:translateY(-8px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.75);
+    transform:translateY(-8px) scale(1.03);
 }
 
 @keyframes keyFloat{
@@ -498,94 +531,120 @@ section{
 
 
 /* =========================================================
-   LOCK
+   KEYHOLE SECTION (ESTILO KINGDOM HEARTS)
 ========================================================= */
 
-.lock-section{
+.keyhole-section{
     background:
         radial-gradient(
             circle at center,
-            rgba(42,35,100,.25),
-            transparent 65%
+            rgba(65, 36, 163, 0.3),
+            rgba(15, 10, 38, 0.8) 70%,
+            transparent 100%
         );
 }
 
-.lock-wrapper{
+.keyhole-wrapper{
     position:relative;
-    width:240px;
-    height:300px;
+    width:280px;
+    height:340px;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
     cursor:pointer;
-    transition:.5s;
+    transition:.5s ease;
 }
 
-.lock-wrapper:hover{
-    transform:scale(1.04);
+.keyhole-wrapper:hover{
+    transform:scale(1.08);
 }
 
-.lock{
+.keyhole-container{
     position:relative;
-    width:180px;
-    height:215px;
-    background:
-        linear-gradient(
-            145deg,
-            #e8e3ff,
-            #8f82ca 45%,
-            #403875
-        );
-    border-radius:25px;
-    border:3px solid #d7ceff;
-    box-shadow:
-        inset 0 0 25px rgba(20,10,70,.7),
-        0 0 30px rgba(120,95,255,.5);
+    width:160px;
+    height:220px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.lock::before{
-    content:"";
+/* Aura resplandeciente alrededor del Keyhole */
+.keyhole-glow{
     position:absolute;
-    width:110px;
-    height:110px;
-    border:13px solid #b5a7ff;
-    border-bottom:0;
-    border-radius:60px 60px 0 0;
-    top:-85px;
-    left:32px;
-    box-shadow:0 0 20px #8065ff;
+    width:190px;
+    height:190px;
+    border-radius:50%;
+    background: radial-gradient(circle, rgba(200, 175, 255, 0.6) 0%, rgba(138, 101, 255, 0.25) 50%, transparent 75%);
+    filter: blur(20px);
+    animation: keyholePulse 3s infinite ease-in-out;
 }
 
-.lock::after{
-    content:"";
-    position:absolute;
-    width:28px;
-    height:60px;
-    background:#29234d;
-    border-radius:20px;
-    top:83px;
-    left:75px;
-    box-shadow:0 0 10px #17132c;
+@keyframes keyholePulse {
+    0%, 100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.25);
+        opacity: 1;
+    }
 }
 
-.lock-symbol{
-    position:absolute;
-    top:115px;
-    left:72px;
-    font-size:35px;
-    z-index:3;
-    color:#eeeaff;
-    text-shadow:0 0 10px white;
+/* SVG del Keyhole estilo KH */
+.keyhole-svg{
+    width:100%;
+    height:100%;
+    z-index:2;
+    filter: drop-shadow(0 0 20px #a885ff) drop-shadow(0 0 50px #6333ff);
+    transition: filter 0.4s ease;
 }
 
-.lock-hint{
+.keyhole-wrapper:hover .keyhole-svg {
+    filter: drop-shadow(0 0 25px #ffffff) drop-shadow(0 0 60px #b89eff) drop-shadow(0 0 90px #7050ff);
+}
+
+/* Anillos decorativos concéntricos */
+.keyhole-ring{
     position:absolute;
-    bottom:-65px;
-    width:300px;
+    border:1px dashed rgba(210, 190, 255, 0.5);
+    border-radius:50%;
+    animation: rotateRing 20s linear infinite;
+    pointer-events:none;
+}
+
+.keyhole-ring-1{
+    width: 220px;
+    height: 220px;
+}
+
+.keyhole-ring-2{
+    width: 260px;
+    height: 260px;
+    border-style: solid;
+    border-color: rgba(160, 120, 255, 0.2);
+    animation: rotateRing 30s linear infinite reverse;
+}
+
+@keyframes rotateRing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.keyhole-hint{
+    margin-top:25px;
     text-align:center;
-    color:rgba(255,255,255,.5);
-    font-size:.8rem;
+    color:rgba(235, 225, 255, 0.7);
+    font-size:.78rem;
     letter-spacing:2px;
+    text-transform:uppercase;
+    text-shadow: 0 0 8px rgba(160, 120, 255, 0.5);
+    transition: color 0.3s;
+}
+
+.keyhole-wrapper:hover .keyhole-hint{
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
 }
 
 
@@ -813,11 +872,11 @@ section{
    FINAL
 ========================================================= */
 
-.final-heart-container{
+.final-key-container{
     width:100px;
     height:100px;
     margin:0 auto;
-    animation:finalPulse 2s infinite;
+    animation:finalPulse 2.2s infinite;
     filter: drop-shadow(0 0 15px #a78bfa) drop-shadow(0 0 50px #7050ff);
 }
 
@@ -875,18 +934,33 @@ section{
    RESPONSIVE
 ========================================================= */
 
-@media(max-width:700px){
+@media(max-width:750px){
+    nav{
+        flex-wrap:wrap;
+        height:auto;
+        padding:10px 5px;
+    }
     nav a{
-        margin:0 6px;
-        font-size:.6rem;
+        margin:3px 6px;
+        font-size:.62rem;
+    }
+    .nav-audio-group {
+        margin-left: 0;
+        margin-top: 4px;
     }
     .music-btn {
-        padding: 4px 10px;
+        padding: 4px 8px;
         font-size: 0.6rem;
-        margin-left: 4px;
     }
     section{
         padding:100px 20px;
+    }
+    .keyblade{
+        width: 240px;
+        height: 420px;
+    }
+    .keyblade-img{
+        height: 380px;
     }
     .story-card{
         padding:30px 25px;
@@ -908,7 +982,7 @@ section{
 
 
 <!-- =========================================================
-     BACKGROUND AUDIO PLAYER (YOUTUBE EMBED)
+     BACKGROUND AUDIO PLAYER (YOUTUBE EMBED WITH API)
 ========================================================= -->
 
 <iframe 
@@ -920,26 +994,26 @@ section{
 
 
 <!-- =========================================================
-     INTRO
+     INTRO (CON EMBLEMA DE LLAVE/KEYBLADE)
 ========================================================= -->
 
 <div id="intro">
 
-    <div class="intro-heart-container">
-        <svg class="kh-heart-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <div class="intro-key-container">
+        <svg class="kh-key-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <defs>
-                <linearGradient id="khGradientIntro" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="keyGradientIntro" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#ffffff" />
                     <stop offset="30%" stop-color="#d8ccff" />
                     <stop offset="70%" stop-color="#9d86ff" />
                     <stop offset="100%" stop-color="#6348d8" />
                 </linearGradient>
             </defs>
-            <path d="M 50 92 C 12 65 2 40 18 20 C 29 6 42 16 50 28 C 58 16 71 6 82 20 C 98 40 88 65 50 92 Z" 
-                  fill="url(#khGradientIntro)" 
+            <path d="M 50 8 C 41 8 33 14 33 24 C 33 32 40 37 45 40 L 45 78 C 42 78 38 78 38 82 C 38 85 42 85 45 85 L 45 92 L 55 92 L 55 85 C 58 85 62 85 62 82 C 62 78 58 78 55 78 L 55 68 L 68 68 L 68 60 L 55 60 L 55 52 L 65 52 L 65 45 L 55 45 L 55 40 C 60 37 67 32 67 24 C 67 14 59 8 50 8 Z M 50 16 C 56 16 60 19 60 24 C 60 29 55 32 50 35 C 45 32 40 29 40 24 C 40 19 44 16 50 16 Z" 
+                  fill="url(#keyGradientIntro)" 
                   stroke="#ffffff" 
                   stroke-width="1.5"/>
-            <path d="M 50 42 L 55 52 L 63 46 L 60 58 L 40 58 L 37 46 L 45 52 Z" fill="#ffffff" opacity="0.85"/>
+            <path d="M 50 21 C 47 18 43 19 43 22 C 43 25 50 29 50 29 C 50 29 57 25 57 22 C 57 19 53 18 50 21 Z" fill="#ffffff" opacity="0.9"/>
         </svg>
     </div>
 
@@ -959,15 +1033,19 @@ section{
 
 
 <!-- =========================================================
-     NAV
+     NAV WITH AUDIO BOOST CONTROL
 ========================================================= -->
 
 <nav>
     <a href="#home">INICIO</a>
     <a href="#story">NUESTRA HISTORIA</a>
     <a href="#keyblade">KEYBLADE</a>
-    <a href="#lock-section">SECRETO</a>
-    <button class="music-btn" id="musicToggle" onclick="toggleMusic()">🎵 MÚSICA: ON</button>
+    <a href="#keyhole">SECRETO</a>
+    
+    <div class="nav-audio-group">
+        <button class="music-btn" id="musicToggle" onclick="toggleMusic()">🎵 MÚSICA: ON</button>
+        <button class="music-btn boost-btn" id="boostToggle" onclick="toggleAudioBoost()">⚡ BOOST: OFF</button>
+    </div>
 </nav>
 
 
@@ -979,20 +1057,20 @@ section{
 
     <div class="world-symbol-wrapper">
         <div class="world-symbol-ring"></div>
-        <svg class="hero-kh-heart" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <svg class="hero-kh-key" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <defs>
-                <linearGradient id="khGradientHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="keyGradientHero" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#ffffff" />
                     <stop offset="25%" stop-color="#e4ddff" />
                     <stop offset="65%" stop-color="#a78bfa" />
                     <stop offset="100%" stop-color="#5535db" />
                 </linearGradient>
             </defs>
-            <path d="M 50 92 C 12 65 2 40 18 20 C 29 6 42 16 50 28 C 58 16 71 6 82 20 C 98 40 88 65 50 92 Z" 
-                  fill="url(#khGradientHero)" 
+            <path d="M 50 8 C 41 8 33 14 33 24 C 33 32 40 37 45 40 L 45 78 C 42 78 38 78 38 82 C 38 85 42 85 45 85 L 45 92 L 55 92 L 55 85 C 58 85 62 85 62 82 C 62 78 58 78 55 78 L 55 68 L 68 68 L 68 60 L 55 60 L 55 52 L 65 52 L 65 45 L 55 45 L 55 40 C 60 37 67 32 67 24 C 67 14 59 8 50 8 Z M 50 16 C 56 16 60 19 60 24 C 60 29 55 32 50 35 C 45 32 40 29 40 24 C 40 19 44 16 50 16 Z" 
+                  fill="url(#keyGradientHero)" 
                   stroke="#ffffff" 
-                  stroke-width="2"/>
-            <path d="M 50 40 L 56 52 L 65 45 L 61 60 L 39 60 L 35 45 L 44 52 Z" fill="#ffffff" opacity="0.9"/>
+                  stroke-width="1.8"/>
+            <path d="M 50 21 C 47 18 43 19 43 22 C 43 25 50 29 50 29 C 50 29 57 25 57 22 C 57 19 53 18 50 21 Z" fill="#ffffff" opacity="0.95"/>
         </svg>
     </div>
 
@@ -1096,7 +1174,7 @@ section{
 
 
 <!-- =========================================================
-     KEYBLADE
+     KEYBLADE SECTION (VERTICAL)
 ========================================================= -->
 
 <section id="keyblade" class="keyblade-section">
@@ -1112,8 +1190,8 @@ section{
     <div class="keyblade-stage">
         <div class="keyblade" onclick="keybladeClick(event)" title="Una Keyblade creada por nuestros corazones">
             <img 
-                src="https://i.ibb.co/LhRXsv9j/Gemini-Generated-Image-3e77es3e77es3e77.jpg" 
-                alt="Nuestra Keyblade Violeta" 
+                src="https://i.postimg.cc/FK2D50NB/Gemini-Generated-Image-3e77es3e77es3e77.jpg" 
+                alt="Nuestra Keyblade Violeta Vertical" 
                 class="keyblade-img"
             >
         </div>
@@ -1127,24 +1205,54 @@ section{
 
 
 <!-- =========================================================
-     LOCK
+     KEYHOLE SECTION (REEMPLAZO DEL CANDADO)
 ========================================================= -->
 
-<section id="lock-section" class="lock-section">
+<section id="keyhole" class="keyhole-section">
 
-    <h2 class="section-title">Un recuerdo escondido</h2>
+    <h2 class="section-title">Un mundo por abrir</h2>
 
     <p class="section-subtitle">
-        Algunas cosas no se encuentran simplemente mirando.
+        Toda cerradura guarda una entrada.
         <br><br>
-        Hay que buscarlas.
+        Apunta la luz para liberar lo que hay más allá.
     </p>
 
-    <div class="lock-wrapper" onclick="openGame()">
-        <div class="lock">
-            <div class="lock-symbol">♥</div>
+    <div class="keyhole-wrapper" onclick="openGame()">
+        <div class="keyhole-ring keyhole-ring-1"></div>
+        <div class="keyhole-ring keyhole-ring-2"></div>
+        <div class="keyhole-glow"></div>
+        
+        <div class="keyhole-container">
+            <svg class="keyhole-svg" viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="keyholeLightGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#ffffff" />
+                        <stop offset="35%" stop-color="#f0eaff" />
+                        <stop offset="70%" stop-color="#a488ff" />
+                        <stop offset="100%" stop-color="#552adb" />
+                    </linearGradient>
+                </defs>
+                
+                <!-- Silueta icónica del Keyhole de Kingdom Hearts -->
+                <path d="M 50 18 
+                         A 27 27 0 1 0 50 72 
+                         L 62 122 
+                         C 62 125, 60 126, 57 126 
+                         L 43 126 
+                         C 40 126, 38 125, 38 122 
+                         L 50 72 
+                         A 27 27 0 1 0 50 18 Z" 
+                      fill="url(#keyholeLightGrad)" 
+                      stroke="#ffffff" 
+                      stroke-width="2"/>
+                      
+                <!-- Núcleo de luz central -->
+                <circle cx="50" cy="45" r="12" fill="#ffffff" opacity="0.9"/>
+            </svg>
         </div>
-        <div class="lock-hint">HACÉ CLICK PARA ABRIR</div>
+
+        <div class="keyhole-hint">TOCÁ EL KEYHOLE PARA SELLAR EL MUNDO</div>
     </div>
 
 </section>
@@ -1159,7 +1267,7 @@ section{
     <h2 class="section-title">Para vos</h2>
 
     <div class="letter">
-        <h3>❤️</h3>
+        <h3>🔑</h3>
         <p>
             No necesitaba una fecha especial para hacerte esto.
             <br><br>
@@ -1186,13 +1294,13 @@ section{
 
 <section id="final">
 
-    <div class="final-heart-container">
-        <svg class="kh-heart-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 50 92 C 12 65 2 40 18 20 C 29 6 42 16 50 28 C 58 16 71 6 82 20 C 98 40 88 65 50 92 Z" 
-                  fill="url(#khGradientHero)" 
+    <div class="final-key-container">
+        <svg class="kh-key-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 50 8 C 41 8 33 14 33 24 C 33 32 40 37 45 40 L 45 78 C 42 78 38 78 38 82 C 38 85 42 85 45 85 L 45 92 L 55 92 L 55 85 C 58 85 62 85 62 82 C 62 78 58 78 55 78 L 55 68 L 68 68 L 68 60 L 55 60 L 55 52 L 65 52 L 65 45 L 55 45 L 55 40 C 60 37 67 32 67 24 C 67 14 59 8 50 8 Z M 50 16 C 56 16 60 19 60 24 C 60 29 55 32 50 35 C 45 32 40 29 40 24 C 40 19 44 16 50 16 Z" 
+                  fill="url(#keyGradientHero)" 
                   stroke="#ffffff" 
-                  stroke-width="2"/>
-            <path d="M 50 40 L 56 52 L 65 45 L 61 60 L 39 60 L 35 45 L 44 52 Z" fill="#ffffff" opacity="0.9"/>
+                  stroke-width="1.8"/>
+            <path d="M 50 21 C 47 18 43 19 43 22 C 43 25 50 29 50 29 C 50 29 57 25 57 22 C 57 19 53 18 50 21 Z" fill="#ffffff" opacity="0.95"/>
         </svg>
     </div>
 
@@ -1237,7 +1345,7 @@ section{
     </div>
 
     <div class="game-status">
-        <span id="gameMessage">Encontrá la diferencia ❤️</span>
+        <span id="gameMessage">Encontrá la diferencia ❤</span>
         <div class="progress">
             <div class="progress-bar" id="progressBar"></div>
         </div>
@@ -1249,19 +1357,20 @@ section{
 <script>
 
 /* =========================================================
-   INTRO & MUSIC PLAYBACK
+   INTRO & MUSIC PLAYBACK WITH AUDIO BOOST
 ========================================================= */
 
 let isMusicPlaying = false;
-const youtubeAudioUrl = "https://www.youtube.com/embed/im5tc4fcg5w?autoplay=1&start=66&enablejsapi=1";
+let isAudioBoosted = false;
+const baseYoutubeUrl = "https://www.youtube.com/embed/im5tc4fcg5w?autoplay=1&start=66&enablejsapi=1";
 
 function startExperience(){
     document.getElementById("intro").classList.add("hidden");
     createParticles(window.innerWidth / 2, window.innerHeight / 2);
     
-    // Inicia la música de Sanctuary desde el seg 66 con audio activado
+    // Inicia la música de Sanctuary desde el seg 66
     const audioIframe = document.getElementById("bg-music");
-    audioIframe.src = youtubeAudioUrl;
+    audioIframe.src = baseYoutubeUrl;
     isMusicPlaying = true;
 }
 
@@ -1274,9 +1383,51 @@ function toggleMusic(){
         musicBtn.textContent = "🔇 MÚSICA: OFF";
         isMusicPlaying = false;
     } else {
-        audioIframe.src = youtubeAudioUrl;
+        audioIframe.src = baseYoutubeUrl;
         musicBtn.textContent = "🎵 MÚSICA: ON";
         isMusicPlaying = true;
+        if(isAudioBoosted) {
+            setTimeout(applyBoostCommand, 1000);
+        }
+    }
+}
+
+// Potenciador de Audio (Audio Booster)
+function toggleAudioBoost(){
+    const boostBtn = document.getElementById("boostToggle");
+    
+    isAudioBoosted = !isAudioBoosted;
+
+    if(isAudioBoosted){
+        boostBtn.classList.add("active");
+        boostBtn.textContent = "⚡ BOOST: +200% 🔥";
+        applyBoostCommand();
+    } else {
+        boostBtn.classList.remove("active");
+        boostBtn.textContent = "⚡ BOOST: OFF";
+        applyNormalVolumeCommand();
+    }
+}
+
+function applyBoostCommand(){
+    const iframe = document.getElementById("bg-music");
+    if(iframe && iframe.contentWindow){
+        iframe.contentWindow.postMessage(JSON.stringify({
+            event: 'command',
+            func: 'setVolume',
+            args: [100]
+        }), '*');
+    }
+}
+
+function applyNormalVolumeCommand(){
+    const iframe = document.getElementById("bg-music");
+    if(iframe && iframe.contentWindow){
+        iframe.contentWindow.postMessage(JSON.stringify({
+            event: 'command',
+            func: 'setVolume',
+            args: [70]
+        }), '*');
     }
 }
 
@@ -1325,7 +1476,7 @@ document.querySelectorAll(".story-card").forEach(card => {
 ========================================================= */
 
 function createParticles(x, y){
-    const symbols = ["✦", "♥", "♪", "♫", "✨"];
+    const symbols = ["✦", "🔑", "♪", "♫", "✨"];
     for(let i = 0; i < 18; i++){
         const p = document.createElement("div");
         p.className = "particle";
@@ -1356,7 +1507,7 @@ function keybladeClick(event){
 
 
 /* =========================================================
-   LOCK / GAME
+   KEYHOLE / GAME
 ========================================================= */
 
 let currentLevel = 1;
