@@ -72,65 +72,41 @@ body{
     pointer-events:none;
 }
 
-.intro-heart{
+.intro-heart-container{
 
     position:relative;
 
-    width:80px;
-    height:80px;
+    width:100px;
+    height:100px;
 
-    transform:rotate(45deg);
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    border:2px solid #d8ccff;
-
-    box-shadow:
-        0 0 15px #a78bfa,
-        0 0 45px #7050ff,
-        inset 0 0 20px #7050ff;
-
-    animation:heartPulse 2s infinite;
+    animation:heartPulse 2s infinite ease-in-out;
 }
 
-.intro-heart::before,
-.intro-heart::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:80px;
-    height:80px;
-
-    border:2px solid #d8ccff;
-
-    border-radius:50%;
-}
-
-.intro-heart::before{
-    top:-42px;
-    left:-2px;
-}
-
-.intro-heart::after{
-    left:-42px;
-    top:-2px;
+.kh-heart-svg{
+    width:100%;
+    height:100%;
+    filter: drop-shadow(0 0 12px #a78bfa) drop-shadow(0 0 30px #7050ff);
 }
 
 @keyframes heartPulse{
 
     0%,100%{
-        transform:rotate(45deg) scale(1);
+        transform:scale(1);
     }
 
     50%{
-        transform:rotate(45deg) scale(1.12);
+        transform:scale(1.15);
     }
 
 }
 
 .intro-text{
     text-align:center;
-    margin-top:70px;
+    margin-top:40px;
 }
 
 .intro-text h1{
@@ -342,43 +318,38 @@ section{
     text-align:center;
 }
 
-.world-symbol{
+.world-symbol-wrapper{
 
-    width:150px;
-    height:150px;
+    position:relative;
 
-    border:1px solid rgba(210,195,255,.7);
-
-    border-radius:50%;
+    width:180px;
+    height:180px;
 
     display:flex;
 
     justify-content:center;
+
     align-items:center;
-
-    position:relative;
-
-    box-shadow:
-        0 0 25px rgba(120,90,255,.4),
-        inset 0 0 35px rgba(120,90,255,.2);
 
     animation:floating 4s infinite ease-in-out;
 }
 
-.world-symbol::before{
+.world-symbol-ring{
 
-    content:"♥";
+    position:absolute;
 
-    font-size:70px;
+    inset:0;
 
-    color:#e4ddff;
+    border:1px solid rgba(210,195,255,.5);
 
-    text-shadow:
-        0 0 15px #a78bfa,
-        0 0 40px #7050ff;
+    border-radius:50%;
+
+    box-shadow:
+        0 0 25px rgba(120,90,255,.4),
+        inset 0 0 35px rgba(120,90,255,.2);
 }
 
-.world-symbol::after{
+.world-symbol-ring::after{
 
     content:"";
 
@@ -386,14 +357,22 @@ section{
 
     inset:-16px;
 
-    border:
-
-        1px solid
-        rgba(180,160,255,.25);
+    border:1px solid rgba(180,160,255,.25);
 
     border-radius:50%;
 
     transform:rotate(25deg);
+}
+
+.hero-kh-heart{
+
+    width:95px;
+
+    height:95px;
+
+    z-index:2;
+
+    filter: drop-shadow(0 0 15px #a78bfa) drop-shadow(0 0 35px #7050ff);
 }
 
 @keyframes floating{
@@ -571,11 +550,6 @@ section{
         );
 }
 
-
-/* =========================================================
-   KEYBLADE (ADAPTADA PARA IMAGEN)
-========================================================= */
-
 .keyblade-stage{
 
     width:100%;
@@ -686,9 +660,6 @@ section{
 
     transform:scale(1.04);
 }
-
-
-/* KEYHOLE */
 
 .lock{
 
@@ -894,9 +865,6 @@ section{
     text-align:center;
 }
 
-
-/* GAME BOARDS */
-
 .game-board{
 
     width:100%;
@@ -979,9 +947,6 @@ section{
         50% 50% 0 0;
 }
 
-
-/* DIFFERENCE TARGETS */
-
 .difference{
 
     position:absolute;
@@ -1028,9 +993,6 @@ section{
         transform:scale(1.2);
     }
 }
-
-
-/* GAME FOOTER */
 
 .game-status{
 
@@ -1148,17 +1110,17 @@ section{
    FINAL
 ========================================================= */
 
-.final-heart{
+.final-heart-container{
 
-    font-size:90px;
+    width:100px;
 
-    color:#e9e3ff;
+    height:100px;
 
-    text-shadow:
-        0 0 15px #a78bfa,
-        0 0 50px #7050ff;
+    margin:0 auto;
 
     animation:finalPulse 2s infinite;
+
+    filter: drop-shadow(0 0 15px #a78bfa) drop-shadow(0 0 50px #7050ff);
 }
 
 @keyframes finalPulse{
@@ -1286,7 +1248,25 @@ section{
 
 <div id="intro">
 
-    <div class="intro-heart"></div>
+    <div class="intro-heart-container">
+        <!-- SVG del Corazón Emblemático de Kingdom Hearts -->
+        <svg class="kh-heart-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="khGradientIntro" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="30%" stop-color="#d8ccff" />
+                    <stop offset="70%" stop-color="#9d86ff" />
+                    <stop offset="100%" stop-color="#6348d8" />
+                </linearGradient>
+            </defs>
+            <path d="M 50 92 C 12 65 2 40 18 20 C 29 6 42 16 50 28 C 58 16 71 6 82 20 C 98 40 88 65 50 92 Z" 
+                  fill="url(#khGradientIntro)" 
+                  stroke="#ffffff" 
+                  stroke-width="1.5"/>
+            <!-- Corona interna estilizada Kingdom Hearts -->
+            <path d="M 50 42 L 55 52 L 63 46 L 60 58 L 40 58 L 37 46 L 45 52 Z" fill="#ffffff" opacity="0.85"/>
+        </svg>
+    </div>
 
     <div class="intro-text">
 
@@ -1334,7 +1314,27 @@ section{
 
 <section id="home" class="hero">
 
-    <div class="world-symbol"></div>
+    <div class="world-symbol-wrapper">
+        <div class="world-symbol-ring"></div>
+        
+        <!-- Corazón estilo Kingdom Hearts del Inicio -->
+        <svg class="hero-kh-heart" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="khGradientHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="25%" stop-color="#e4ddff" />
+                    <stop offset="65%" stop-color="#a78bfa" />
+                    <stop offset="100%" stop-color="#5535db" />
+                </linearGradient>
+            </defs>
+            <path d="M 50 92 C 12 65 2 40 18 20 C 29 6 42 16 50 28 C 58 16 71 6 82 20 C 98 40 88 65 50 92 Z" 
+                  fill="url(#khGradientHero)" 
+                  stroke="#ffffff" 
+                  stroke-width="2"/>
+            <!-- Detalle de Corona Kingdom Hearts -->
+            <path d="M 50 40 L 56 52 L 65 45 L 61 60 L 39 60 L 35 45 L 44 52 Z" fill="#ffffff" opacity="0.9"/>
+        </svg>
+    </div>
 
     <h1>
         OUR LITTLE KINGDOM
@@ -1579,13 +1579,13 @@ section{
         <div
             class="keyblade"
             onclick="keybladeClick(event)"
-            title="Una Keyblade creada por tu corazon"
+            title="Una Keyblade creada por nuestros corazones"
         >
 
-            <!-- Imagen cargada directamente desde Postimages -->
+            <!-- Imagen cargada desde Postimages -->
             <img 
                 src="https://i.postimg.cc/FK2D50NB/Gemini-Generated-Image-3e77es3e77es3e77.jpg" 
-                alt="Tu Keyblade" 
+                alt="Nuestra Keyblade Violeta" 
                 class="keyblade-img"
             >
 
@@ -1721,8 +1721,14 @@ section{
 
 <section id="final">
 
-    <div class="final-heart">
-        ♥
+    <div class="final-heart-container">
+        <svg class="kh-heart-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 50 92 C 12 65 2 40 18 20 C 29 6 42 16 50 28 C 58 16 71 6 82 20 C 98 40 88 65 50 92 Z" 
+                  fill="url(#khGradientHero)" 
+                  stroke="#ffffff" 
+                  stroke-width="2"/>
+            <path d="M 50 40 L 56 52 L 65 45 L 61 60 L 39 60 L 35 45 L 44 52 Z" fill="#ffffff" opacity="0.9"/>
+        </svg>
     </div>
 
     <h2 class="final-title">
