@@ -182,7 +182,7 @@ body{
 
 
 /* =========================================================
-   NAVIGATION
+   NAVIGATION & MUSIC CONTROL
 ========================================================= */
 
 nav{
@@ -212,6 +212,24 @@ nav a{
 nav a:hover{
     color:white;
     text-shadow:0 0 10px #a78bfa;
+}
+
+.music-btn {
+    background: rgba(167, 139, 250, 0.15);
+    border: 1px solid rgba(185, 166, 255, 0.4);
+    color: #e2d9ff;
+    padding: 6px 14px;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s ease;
+}
+
+.music-btn:hover {
+    background: rgba(167, 139, 250, 0.35);
+    box-shadow: 0 0 12px rgba(167, 139, 250, 0.5);
 }
 
 
@@ -862,6 +880,11 @@ section{
         margin:0 6px;
         font-size:.6rem;
     }
+    .music-btn {
+        padding: 4px 10px;
+        font-size: 0.6rem;
+        margin-left: 4px;
+    }
     section{
         padding:100px 20px;
     }
@@ -882,6 +905,18 @@ section{
 
 
 <body>
+
+
+<!-- =========================================================
+     BACKGROUND AUDIO PLAYER (YOUTUBE EMBED)
+========================================================= -->
+
+<iframe 
+    id="bg-music" 
+    src="" 
+    allow="autoplay" 
+    style="position: fixed; width: 1px; height: 1px; opacity: 0; pointer-events: none; border: 0; z-index: -100;">
+</iframe>
 
 
 <!-- =========================================================
@@ -932,6 +967,7 @@ section{
     <a href="#story">NUESTRA HISTORIA</a>
     <a href="#keyblade">KEYBLADE</a>
     <a href="#lock-section">SECRETO</a>
+    <button class="music-btn" id="musicToggle" onclick="toggleMusic()">🎵 MÚSICA: ON</button>
 </nav>
 
 
@@ -1213,12 +1249,35 @@ section{
 <script>
 
 /* =========================================================
-   INTRO
+   INTRO & MUSIC PLAYBACK
 ========================================================= */
+
+let isMusicPlaying = false;
+const youtubeAudioUrl = "https://www.youtube.com/embed/im5tc4fcg5w?autoplay=1&start=66&enablejsapi=1";
 
 function startExperience(){
     document.getElementById("intro").classList.add("hidden");
     createParticles(window.innerWidth / 2, window.innerHeight / 2);
+    
+    // Inicia la música de Sanctuary desde el seg 66 con audio activado
+    const audioIframe = document.getElementById("bg-music");
+    audioIframe.src = youtubeAudioUrl;
+    isMusicPlaying = true;
+}
+
+function toggleMusic(){
+    const audioIframe = document.getElementById("bg-music");
+    const musicBtn = document.getElementById("musicToggle");
+
+    if(isMusicPlaying){
+        audioIframe.src = "";
+        musicBtn.textContent = "🔇 MÚSICA: OFF";
+        isMusicPlaying = false;
+    } else {
+        audioIframe.src = youtubeAudioUrl;
+        musicBtn.textContent = "🎵 MÚSICA: ON";
+        isMusicPlaying = true;
+    }
 }
 
 
